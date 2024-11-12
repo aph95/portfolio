@@ -1,12 +1,19 @@
-anime({
-    targets: 'div.box',
-    translateY: [
-        { value: 200, duration: 500 },
-        { value: 0, duration: 800}
-    ],
-    rotate:{
-        value: '1turn',
-        easing: 'easeInOutSine',
-    },
-    delay: function(el, i, l){ return i * 1000}
-});
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });

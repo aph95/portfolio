@@ -1,12 +1,9 @@
-.box{
-    position:relative;
-    width:100px;
-    height:100px;
-    margin:4px;
-    display:inline-block;
-}
-
-.red{background-color:red;}
-.blue{background-color:blue;}
-.green{background-color:green;}
-.yellow{background-color:yellow;}
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
