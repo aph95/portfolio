@@ -1,14 +1,43 @@
 .ml2 {
-    font-weight: 900;
-    font-size: 2.5em;
-  }
-  
-  .ml2 .letter {
-    display: inline-block;
-    line-height: 1em;
-  }
+  font-weight: 900;
+  font-size: 2.5em;
+}
 
-  .navbar {
-    font-size: 1.5em;
-    font-weight:900;
-  }
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.navbar {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.navbar-toggler {
+  border: 0;
+  outline: none !important;
+  /* Force the removal of the outline */
+  background: transparent;
+  /* Transparent background */
+}
+
+/* Remove the outline when in focus, active, or hover state */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  /* Ensure no shadow appears as well */
+}
+
+/* Initial styles for the hamburger icon */
+.navbar-toggler-icon {
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+}
+
+/* When the navbar toggler button is active (clicked) */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(90deg);
+  /* Rotate by 90 degrees */
+}
