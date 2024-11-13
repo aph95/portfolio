@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// 3D
+
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
@@ -62,7 +64,7 @@ function animate() {
 }
 
 // Setup scene objects
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+const geometry = new THREE.BoxGeometry(2, 6, 2);
 
 function createWall(width, height) {
   for (let x = -width / 2; x <= width / 2; x++) {
