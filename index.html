@@ -14,6 +14,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <!-- CSS style sheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@v0.154.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@v0.154.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -46,15 +55,16 @@
     </h1>
   </div>
   <main>
-
+    
   </main>
   <!-- Bootstrap JS library -->
   <script src="js/bootstrap.bundle.min.js"></script>
   <!-- Anime JS library -->
   <script src="js/anime.min.js"></script>
   <!-- Main JavaScript file -->
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
   <script src="js/three.module.js"></script>
+  <script src="js/Three.js"></script>
   <script src="js/OrbitControls.js"></script>
   <script src="js/GLTFLoader.js"></script>
 </body>
