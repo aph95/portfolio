@@ -46,7 +46,7 @@ const scene = new THREE.Scene();
 
 // Setup scene lighting
 const whiteLight = new THREE.DirectionalLight(0xffffff);
-whiteLight.position.set(0, 0, 1);
+whiteLight.position.set(1, 2, 3);
 scene.add(whiteLight);
 scene.add(new THREE.AmbientLight(0xffffff, 0.1));
 
