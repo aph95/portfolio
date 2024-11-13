@@ -37,7 +37,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 // Setup the renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setClearColor(0x222230);
+renderer.setClearColor(0xffffff);
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
