@@ -1,29 +1,31 @@
-var textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// Wrap each letter in a span with the class "letter" for the animate-text only
+document.querySelectorAll('.animate-text').forEach((element) => {
+  element.innerHTML = element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+});
 
+// Animate the text without interfering with the color
 anime.timeline({ loop: false })
   .add({
-    targets: '.ml2 .letter',
+    targets: '.animate-text .letter',
     scale: [4, 1],
     opacity: [0, 1],
     translateZ: 0,
     easing: "easeOutExpo",
     duration: 950,
     delay: (el, i) => 70 * i
-  }).add({
-    targets: '.ml2',
+  })
+  .add({
+    targets: '.animate-text',
     opacity: 1,
     duration: 1000,
     easing: "easeOutExpo",
     delay: 1000
   });
 
+// Event listener for the navbar toggler
 document.addEventListener('DOMContentLoaded', function () {
   const toggler = document.querySelector('.navbar-toggler');
-
-  // Event spy
   toggler.addEventListener('click', function () {
-    // Toggle the collapsed class immediately on click
     toggler.classList.toggle('collapsed');
   });
 });
