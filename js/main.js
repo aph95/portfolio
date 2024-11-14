@@ -43,3 +43,23 @@ anime.timeline({loop: false})
     duration: 750,
     delay: anime.stagger(50, {start: 50})  // Lightbulb follows the staggered delay
   });
+
+  // JavaScript to toggle the navbar visibility on scroll
+document.addEventListener('DOMContentLoaded', function () {
+  let prevScrollPos = window.pageYOffset;  // Get the initial scroll position
+  const navbar = document.querySelector('.navbar');  // Select the navbar
+
+  window.addEventListener('scroll', function () {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      // Scrolling up - show the navbar
+      navbar.classList.remove('navbar-hidden');
+    } else {
+      // Scrolling down - hide the navbar
+      navbar.classList.add('navbar-hidden');
+    }
+
+    prevScrollPos = currentScrollPos;  // Update the previous scroll position
+  });
+});
