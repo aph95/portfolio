@@ -19,7 +19,7 @@ body {
 .animate-text {
   font-weight: 800;
   font-size: 1.8em; /* Adjust font size */
-  color: white;
+  color: #FBFBF9;
   margin: 0; /* Remove margin */
 }
 
@@ -73,7 +73,7 @@ body {
 .navbar {
   font-size: 1em;
   font-weight: 500;
-  background-color: white;
+  background-color: #FBFBF9;
 }
 
 .navbar-toggler {
@@ -118,8 +118,13 @@ body {
   line-height: 1em;
 }
 
+.letters {
+  color:#FBFBF9;
+}
+
 .ux-quote {
   font-family:'Georgia', Georgia, serif;
   font-style:italic;
   font-size:1.8rem;
+  color: #FBFBF9;
 }
