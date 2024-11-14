@@ -15,19 +15,6 @@ body {
   margin:1rem;
 }
 
-/* Styles for animated text */
-.animate-text {
-  font-weight: 800;
-  font-size: 1.8em; /* Adjust font size */
-  color: #FBFBF9;
-  margin: 0; /* Remove margin */
-}
-
-.ml2 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
 /* Floating iPhone styling */
 .floating-container {
   display: flex;
@@ -128,4 +115,5 @@ body {
   font-style:italic;
   font-size:1.8rem;
   color: #FBFBF9;
+  margin-top:-1rem;
 }
