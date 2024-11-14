@@ -44,22 +44,24 @@ anime.timeline({loop: false})
     delay: anime.stagger(50, {start: 50})  // Lightbulb follows the staggered delay
   });
 
-  // JavaScript to toggle the navbar visibility on scroll
-document.addEventListener('DOMContentLoaded', function () {
-  let prevScrollPos = window.pageYOffset;  // Get the initial scroll position
-  const navbar = document.querySelector('.navbar');  // Select the navbar
-
-  window.addEventListener('scroll', function () {
-    const currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos > currentScrollPos) {
-      // Scrolling up - show the navbar
-      navbar.classList.remove('navbar-hidden');
-    } else {
-      // Scrolling down - hide the navbar
-      navbar.classList.add('navbar-hidden');
-    }
-
-    prevScrollPos = currentScrollPos;  // Update the previous scroll position
+  document.addEventListener('DOMContentLoaded', function () {
+    let lastScrollPosition = 0;
+    const navbar = document.querySelector('.navbar');
+  
+    window.addEventListener('scroll', function () {
+      // Get the current scroll position
+      let currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+      // Show or hide the navbar based on the scroll direction
+      if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 50) {
+        // Scroll down - hide the navbar
+        navbar.style.top = '-100px'; // Moves it out of view
+      } else {
+        // Scroll up - show the navbar
+        navbar.style.top = '0';
+      }
+      
+      // Update the last scroll position
+      lastScrollPosition = currentScrollPosition;
+    });
   });
-});
