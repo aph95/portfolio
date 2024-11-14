@@ -21,7 +21,7 @@ main {
   align-items: center;
 }
 
-/* Floating iPhone styling */
+/* Floating arrow styling */
 .floating-container {
   display: flex;
   justify-content: center;
@@ -30,8 +30,8 @@ main {
   margin-top: 5rem; /* Space between text and image */
 }
 
-.iphone-image {
-  width: 50px; /* Default size for larger screens */
+.arrow-image {
+  width: 2rem;; /* Default size for larger screens */
   max-width: 100%; /* Ensure image doesn't overflow */
   height: auto;
   fill:white;

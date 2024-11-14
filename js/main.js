@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 anime({
-  targets: '.iphone-image',  // Target the iPhone image
+  targets: '.arrow-image',  // Target the iPhone image
   translateY: [-20, 20],     // Float up and down by 20px
   direction: 'alternate',    // Reverse the direction on each cycle
   easing: 'easeInOutSine',   // Smooth easing function
