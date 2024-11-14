@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
   background-color: rgb(255, 255, 255);
 }
@@ -6,14 +7,13 @@ main {
   margin: 0;
 }
 
-/* General body and text styling */
+/* Jumbotron Container */
 .jumbotron-container {
   background-color: black;
   height: 100vh;
   padding-top: 25rem;
 }
 
-/* Center content vertically and horizontally using flexbox */
 .content-container {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ main {
   align-items: center;
 }
 
-/* Floating arrow styling */
+/* Floating Arrow */
 .floating-container {
   display: flex;
   justify-content: center;
@@ -37,27 +37,21 @@ main {
   fill: white;
 }
 
-/* Floating animation */
+/* Floating Arrow Animation */
 @keyframes floatAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
 }
 
-/* Hide arrow on mobile */
+/* Hide Arrow on Small Screens */
 @media (max-width: 576px) {
   .arrow-image {
     display: none;
   }
 }
 
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
   font-size: 1.2em;
   font-weight: 500;
@@ -66,10 +60,9 @@ main {
   position: fixed;
   width: 100%;
   z-index: 100;
-  transition: top 0.3s ease;  /* Apply transition to the top property */
+  transition: top 0.3s ease;
 }
 
-/* CSS class to hide the navbar */
 .navbar-hidden {
   transform: translateY(-100%);
 }
@@ -80,8 +73,8 @@ main {
   background: transparent;
 }
 
-.navbar-toggler:focus,
-.navbar-toggler:active,
+.navbar-toggler:focus, 
+.navbar-toggler:active, 
 .navbar-toggler:hover {
   outline: none !important;
   box-shadow: none !important;
@@ -95,13 +88,13 @@ main {
   transform: rotate(90deg);
 }
 
+/* Navbar Links Styling */
 nav a {
   text-decoration: none;
   color: black;
   position: relative;
 }
 
-/* Underline for hovering */
 nav a::after {
   content: '';
   display: block;
@@ -113,12 +106,12 @@ nav a::after {
   transition: width 0.2s;
 }
 
-/* Width of 100% on underline */
-nav a:hover::after,
+nav a:hover::after, 
 #current-page::after {
   width: 100%;
 }
 
+/* Text Animation Styles */
 .ml6 {
   position: relative;
   font-weight: 900;
@@ -149,21 +142,22 @@ nav a:hover::after,
   color: #FBFBF9;
 }
 
+/* UX Quote Styles */
 .ux-quote {
-  font-family: 'Georgia', Georgia, serif;
+  font-family: 'Georgia', serif;
   font-style: italic;
   font-size: 1.8rem;
   color: #FBFBF9;
   margin-top: -0.6rem;
 }
 
-/* Featured examples */
+/* Featured Examples Section */
 .examples h1 {
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
 }
 
-/* Responsive adjustments for jumbotron text */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .jumbotron-container {
     padding-top: 15rem;
