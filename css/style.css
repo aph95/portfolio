@@ -56,14 +56,6 @@ main {
   }
 }
 
-/* Responsive sizing for the arrow image */
-@media (max-width: 768px) {
-  .arrow-image {
-    width: 70%;
-    /* Smaller size for medium screens */
-  }
-}
-
 @media (max-width: 576px) {
   .arrow-image {
     display: none;
@@ -76,12 +68,18 @@ main {
   font-size: 1.2em;
   font-weight: 500;
   background-color: white;
-  font-family: 'Helvetica';
+  font-family: 'Noto Sans', sans-serif;
   position: fixed;
   width: 100%;
   z-index: 100;
-  top: 0; /* Set initial position */
-  transition: top 0.3s ease; /* Smooth hide/show transition */
+  transition: transform 0.3s ease;
+  /* Smooth transition for show/hide */
+}
+
+/* CSS class to hide the navbar */
+.navbar-hidden {
+  transform: translateY(-100%);
+  /* Moves the navbar out of view */
 }
 
 .navbar-toggler {
