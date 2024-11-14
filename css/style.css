@@ -145,11 +145,9 @@ nav a:hover::after {
 }
 
 .ml6 i.fa-lightbulb {
-  opacity: 0; /* Initially hidden */
-  transform: scale(0); /* Initially small */
-  transition: all 0.1s ease;
   font-size: 3rem; /* Set size of the icon */
   color: #f1c40f; /* Change color to yellow */
+  margin-left:1rem;
 }
 
 .letters {
