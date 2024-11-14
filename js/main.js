@@ -30,3 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+anime({
+  targets: '.iphone-image',  // Target the iPhone image
+  translateY: [-20, 20],     // Float up and down by 20px
+  direction: 'alternate',    // Reverse the direction on each cycle
+  easing: 'easeInOutSine',   // Smooth easing function
+  duration: 1000,            // 2 seconds per cycle
+  loop: true                 // Loop the animation infinitely
+});
