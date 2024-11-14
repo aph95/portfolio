@@ -17,7 +17,6 @@ main {
 .content-container {
   display: flex;
   flex-direction: column;
-  /* Stack text and image vertically */
   justify-content: center;
   align-items: center;
 }
@@ -29,14 +28,11 @@ main {
   align-items: center;
   height: auto;
   margin-top: 5rem;
-  /* Space between text and image */
 }
 
 .arrow-image {
   width: 2rem;
-  /* Default size for larger screens */
   max-width: 100%;
-  /* Ensure image doesn't overflow */
   height: auto;
   fill: white;
 }
@@ -46,20 +42,18 @@ main {
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-20px);
   }
-
   100% {
     transform: translateY(0);
   }
 }
 
+/* Hide arrow on mobile */
 @media (max-width: 576px) {
   .arrow-image {
     display: none;
-    /* Hides the arrow image on mobile screens */
   }
 }
 
@@ -73,13 +67,11 @@ main {
   width: 100%;
   z-index: 100;
   transition: transform 0.3s ease;
-  /* Smooth transition for show/hide */
 }
 
 /* CSS class to hide the navbar */
 .navbar-hidden {
   transform: translateY(-100%);
-  /* Moves the navbar out of view */
 }
 
 .navbar-toggler {
@@ -122,10 +114,7 @@ nav a::after {
 }
 
 /* Width of 100% on underline */
-nav a:hover::after {
-  width: 100%;
-}
-
+nav a:hover::after,
 #current-page::after {
   width: 100%;
 }
@@ -152,9 +141,7 @@ nav a:hover::after {
 
 .ml6 i.fa-lightbulb {
   font-size: 3rem;
-  /* Set size of the icon */
   color: #f1c40f;
-  /* Change color to yellow */
   margin-left: 1rem;
 }
 
@@ -174,4 +161,33 @@ nav a:hover::after {
 .examples h1 {
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
+}
+
+/* Responsive adjustments for jumbotron text */
+@media (max-width: 768px) {
+  .jumbotron-container {
+    padding-top: 15rem;
+  }
+
+  .ml6 {
+    font-size: 2em;
+  }
+
+  .ux-quote {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .jumbotron-container {
+    padding-top: 10rem;
+  }
+
+  .ml6 {
+    font-size: 1.5em;
+  }
+
+  .ux-quote {
+    font-size: 0.8rem;
+  }
 }
