@@ -1,9 +1,16 @@
-/* General body and text styling */
 body {
-  height: 100vh;
+  background-color:rgb(255, 255, 255);
+}
+
+main {
+  margin:0;
+}
+
+/* General body and text styling */
+.jumbotron-container {
   background-color: black;
-  color: white;
-  margin: 0;
+  height:100vh;
+  padding-top:7rem;
 }
 
 /* Center content vertically and horizontally using flexbox */
@@ -12,7 +19,6 @@ body {
   flex-direction: column; /* Stack text and image vertically */
   justify-content: center;
   align-items: center;
-  margin:1rem;
 }
 
 /* Floating iPhone styling */
@@ -60,8 +66,11 @@ body {
 .navbar {
   font-size: 1.2em;
   font-weight: 500;
-  background-color: #FBFBF9;
+  background-color: white;
   font-family:'Helvetica';
+  position:absolute;
+  width:100%;
+  z-index:100;
 }
 
 .navbar-toggler {
@@ -85,6 +94,34 @@ body {
   transform: rotate(90deg);
 }
 
+nav a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+/* Lägger en underline under hovring på meny items. */
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  transition: width 0.2s;
+}
+
+/* Sätter en bredd på 100% på underline. */
+
+nav a:hover::after {
+  width: 100%;
+}
+
+#current-page::after {
+  width: 100%;
+}
 
 .ml6 {
   position: relative;
