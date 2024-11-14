@@ -71,9 +71,10 @@ body {
 
 /* Navbar styles */
 .navbar {
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 550;
   background-color: #FBFBF9;
+  font-family:'Helvetica';
 }
 
 .navbar-toggler {
