@@ -10,7 +10,7 @@ main {
 .jumbotron-container {
   background-color: black;
   height:100vh;
-  padding-top:7rem;
+  padding-top:25rem;
 }
 
 /* Center content vertically and horizontally using flexbox */
