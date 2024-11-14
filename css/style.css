@@ -12,13 +12,13 @@ body {
   flex-direction: column; /* Stack text and image vertically */
   justify-content: center;
   align-items: center;
-  height: 70vh; /* Full viewport height */
+  margin:1rem;
 }
 
 /* Styles for animated text */
 .animate-text {
   font-weight: 800;
-  font-size: 1em; /* Adjust font size */
+  font-size: 2em; /* Adjust font size */
   color: white;
   margin: 0; /* Remove margin */
 }
@@ -34,14 +34,13 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-top: 2rem; /* Space between text and image */
+  margin-top: 5rem; /* Space between text and image */
 }
 
 .iphone-image {
   width: 400px; /* Default size for larger screens */
   max-width: 100%; /* Ensure image doesn't overflow */
   height: auto;
-  animation: floatAnimation 2s infinite ease-in-out;
 }
 
 /* Floating animation */
