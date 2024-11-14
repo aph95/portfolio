@@ -16,7 +16,8 @@ main {
 /* Center content vertically and horizontally using flexbox */
 .content-container {
   display: flex;
-  flex-direction: column; /* Stack text and image vertically */
+  flex-direction: column;
+  /* Stack text and image vertically */
   justify-content: center;
   align-items: center;
 }
@@ -27,12 +28,15 @@ main {
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-top: 5rem; /* Space between text and image */
+  margin-top: 5rem;
+  /* Space between text and image */
 }
 
 .arrow-image {
-  width: 2rem; /* Default size for larger screens */
-  max-width: 100%; /* Ensure image doesn't overflow */
+  width: 2rem;
+  /* Default size for larger screens */
+  max-width: 100%;
+  /* Ensure image doesn't overflow */
   height: auto;
   fill: white;
 }
@@ -42,24 +46,28 @@ main {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
 }
 
-/* Responsive sizing for the iPhone image */
+/* Responsive sizing for the arrow image */
 @media (max-width: 768px) {
-  .iphone-image {
-    width: 70%; /* Smaller size for medium screens */
+  .arrow-image {
+    width: 70%;
+    /* Smaller size for medium screens */
   }
 }
 
 @media (max-width: 576px) {
-  .iphone-image {
-    display: none; /* Hides the iPhone image on mobile screens */
+  .arrow-image {
+    display: none;
+    /* Hides the arrow image on mobile screens */
   }
 }
 
@@ -68,16 +76,18 @@ main {
   font-size: 1.2em;
   font-weight: 500;
   background-color: white;
-  font-family: 'Helvetica';
+  font-family: 'Noto Sans', sans-serif;
   position: fixed;
   width: 100%;
   z-index: 100;
-  transition: transform 0.3s ease; /* Smooth transition for show/hide */
+  transition: transform 0.3s ease;
+  /* Smooth transition for show/hide */
 }
 
 /* CSS class to hide the navbar */
 .navbar-hidden {
-  transform: translateY(-100%); /* Moves the navbar out of view */
+  transform: translateY(-100%);
+  /* Moves the navbar out of view */
 }
 
 .navbar-toggler {
@@ -149,8 +159,10 @@ nav a:hover::after {
 }
 
 .ml6 i.fa-lightbulb {
-  font-size: 3rem; /* Set size of the icon */
-  color: #f1c40f; /* Change color to yellow */
+  font-size: 3rem;
+  /* Set size of the icon */
+  color: #f1c40f;
+  /* Change color to yellow */
   margin-left: 1rem;
 }
 
