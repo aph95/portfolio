@@ -140,6 +140,19 @@ nav a:hover::after,
   margin-left: 1rem;
 }
 
+/* New responsive styling for the lightbulb */
+@media (max-width: 768px) {
+  .ml6 i.fa-lightbulb {
+    font-size: 2.5rem; /* Slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .ml6 i.fa-lightbulb {
+    font-size: 2rem; /* Smaller for mobile devices */
+  }
+}
+
 .letters {
   color: #FBFBF9;
 }
@@ -185,5 +198,10 @@ nav a:hover::after,
 
   .ux-quote {
     font-size: 0.8rem;
+  }
+
+  /* Disable hover underline effect on mobile */
+  nav a:hover::after {
+    width: 0; /* Remove the underline */
   }
 }
