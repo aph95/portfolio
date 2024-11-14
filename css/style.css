@@ -18,7 +18,7 @@ body {
 /* Styles for animated text */
 .animate-text {
   font-weight: 800;
-  font-size: 2em; /* Adjust font size */
+  font-size: 1.8em; /* Adjust font size */
   color: white;
   margin: 0; /* Remove margin */
 }
