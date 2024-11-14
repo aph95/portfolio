@@ -15,9 +15,7 @@ anime({
   loop: true                 // Loop the animation infinitely
 });
 
-// text for let's bring your ideas to life
-
-// Wrap every letter in a span
+// Text animation for "Let's bring your ideas to life."
 var textWrapper = document.querySelector('.ml6 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -28,4 +26,12 @@ anime.timeline({loop: false})
     translateZ: 0,
     duration: 750,
     delay: (el, i) => 50 * i
+  })
+  .add({
+    targets: '.fa-lightbulb', // Target the lightbulb icon
+    opacity: [0, 1],           // Fade in the lightbulb
+    scale: [0, 1],             // Scale up the lightbulb
+    duration: 500,             // Duration of the lightbulb animation
+    easing: 'easeInOutSine',   // Easing function for smooth transition
+    offset: '-=300'            // Start after the text animation ends, adjust as needed
   });
