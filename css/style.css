@@ -109,6 +109,8 @@ nav a::after {
 nav a:hover::after, 
 #current-page::after {
   width: 100%;
+  background-color:black;
+  height: 2px;
 }
 
 /* Text Animation Styles */
