@@ -83,15 +83,20 @@ function initScrollSpy() {
 function initBackgroundTransition() {
   const mainContent = document.body;
 
+  // Set initial background color and smooth transition for background change
+  mainContent.style.transition = 'background-color 0.3s ease';
+
+  // Define the scroll threshold where color changes (in pixels)
+  const colorChangeThreshold = 100; // You can adjust this threshold value
+
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
-    const scrollLimit = document.body.scrollHeight - window.innerHeight;
 
-    // Calculate the scroll percentage
-    const scrollPercentage = Math.min(scrollPosition / scrollLimit, 1);
+    // Calculate the scroll percentage (how far the user has scrolled)
+    const scrollPercentage = Math.min(scrollPosition / colorChangeThreshold, 1);
 
-    // Map scroll percentage to color from black to white
-    const colorValue = Math.floor(scrollPercentage * 255);
+    // Gradually change background color as the user scrolls
+    const colorValue = Math.floor((1 - scrollPercentage) * 255);
     mainContent.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
   });
 }

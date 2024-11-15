@@ -4,14 +4,13 @@ body {
   transition: background-color 0.4s ease; /* Smooth transition */
 }
 
-
 main {
   margin: 0;
 }
 
 /* Jumbotron container */
 .jumbotron-container {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   padding-top: 25rem;
 }
@@ -36,7 +35,7 @@ main {
   width: 2rem;
   max-width: 100%;
   height: auto;
-  fill: white;
+  fill: rgb(0, 0, 0);
 }
 
 /* Floating arrow animation */
@@ -138,7 +137,7 @@ nav a:hover::after,
 
 .ml6 i.fa-lightbulb {
   font-size: 3rem;
-  color: #f1c40f;
+  color: #000000;
   margin-left: 1rem;
 }
 
@@ -156,7 +155,7 @@ nav a:hover::after,
 }
 
 .letters {
-  color: #FBFBF9;
+  color: #000000;
 }
 
 /* UX quote styles */
@@ -164,14 +163,15 @@ nav a:hover::after,
   font-family: 'Georgia', serif;
   font-style: italic;
   font-size: 1.8rem;
-  color: #FBFBF9;
+  color: #000000;
   margin-top: -0.6rem;
 }
 
 /* Featured examples section */
-.examples h1 {
+.examples h1, p {
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
+  color:white;
 }
 
 /* Responsive adjustments */
