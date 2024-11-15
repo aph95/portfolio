@@ -35,7 +35,6 @@ main {
   width: 2rem;
   max-width: 100%;
   height: auto;
-  fill: rgb(0, 0, 0);
 }
 
 /* Floating arrow animation */
@@ -92,7 +91,7 @@ main {
 /* Navbar links styling */
 nav a {
   text-decoration: none;
-  color: black;
+  color: #222222;
   position: relative;
 }
 
@@ -101,7 +100,7 @@ nav a::after {
   display: block;
   width: 0;
   height: 2px;
-  background-color: black;
+  background-color: #222222;
   bottom: 0;
   left: 0;
   transition: width 0.2s;
@@ -110,7 +109,7 @@ nav a::after {
 nav a:hover::after, 
 #current-page::after {
   width: 100%;
-  background-color:black;
+  background-color:#222222;
   height: 2px;
 }
 
@@ -137,7 +136,7 @@ nav a:hover::after,
 
 .ml6 i.fa-lightbulb {
   font-size: 3rem;
-  color: #000000;
+  color: #222222;
   margin-left: 1rem;
 }
 
@@ -155,7 +154,7 @@ nav a:hover::after,
 }
 
 .letters {
-  color: #000000;
+  color: #222222;
 }
 
 /* UX quote styles */
@@ -163,7 +162,7 @@ nav a:hover::after,
   font-family: 'Georgia', serif;
   font-style: italic;
   font-size: 1.8rem;
-  color: #000000;
+  color: #222222;
   margin-top: -0.6rem;
 }
 

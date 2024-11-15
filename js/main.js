@@ -96,7 +96,7 @@ function initBackgroundTransition() {
     const scrollPercentage = Math.min(scrollPosition / colorChangeThreshold, 1);
 
     // Gradually change background color as the user scrolls
-    const colorValue = Math.floor((1 - scrollPercentage) * 255);
+    const colorValue = 255 - Math.floor(scrollPercentage * (255 - 34)); // Maps white to #222222
     mainContent.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
   });
 }
