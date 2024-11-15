@@ -117,7 +117,7 @@ nav a:hover::after,
 .ml6 {
   position: relative;
   font-weight: 900;
-  font-size: 3.3em;
+  font-size: 5.3em;
 }
 
 .ml6 .text-wrapper {
@@ -135,7 +135,7 @@ nav a:hover::after,
 }
 
 .ml6 i.fa-lightbulb {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #222222;
   margin-left: 1rem;
 }
@@ -143,13 +143,13 @@ nav a:hover::after,
 /* Responsive styling for the lightbulb */
 @media (max-width: 768px) {
   .ml6 i.fa-lightbulb {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .ml6 i.fa-lightbulb {
-    font-size: 2rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -161,7 +161,7 @@ nav a:hover::after,
 .ux-quote {
   font-family: 'Georgia', serif;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #222222;
   margin-top: -0.6rem;
 }
@@ -176,29 +176,41 @@ nav a:hover::after,
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .jumbotron-container {
-    padding-top: 15rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    
   }
 
   .ml6 {
-    font-size: 2em;
+    font-size: 4.7em;
   }
 
   .ux-quote {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
+
+  .arrow-image {
+    opacity:0;
+  }
+
+  .examples {
+    top:5rem;
+  }
+
 }
 
 @media (max-width: 576px) {
   .jumbotron-container {
-    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .ml6 {
-    font-size: 1.5em;
+    font-size: 3.2em;
   }
 
   .ux-quote {
-    font-size: 0.8rem;
+    font-size: 1.8rem;
   }
 
   /* Disable hover underline effect on mobile */
@@ -206,3 +218,4 @@ nav a:hover::after,
     width: 0;
   }
 }
+
