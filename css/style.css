@@ -1,13 +1,15 @@
-/* General Body Styles */
+/* General body styles */
+/* Set initial background color */
 body {
-  background-color: rgb(255, 255, 255);
+  transition: background-color 0.4s ease; /* Smooth transition */
 }
+
 
 main {
   margin: 0;
 }
 
-/* Jumbotron Container */
+/* Jumbotron container */
 .jumbotron-container {
   background-color: black;
   height: 100vh;
@@ -21,7 +23,7 @@ main {
   align-items: center;
 }
 
-/* Floating Arrow */
+/* Floating arrow */
 .floating-container {
   display: flex;
   justify-content: center;
@@ -37,21 +39,21 @@ main {
   fill: white;
 }
 
-/* Floating Arrow Animation */
+/* Floating arrow animation */
 @keyframes floatAnimation {
   0% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0); }
 }
 
-/* Hide Arrow on Small Screens */
+/* Hide arrow on small screens */
 @media (max-width: 576px) {
   .arrow-image {
     display: none;
   }
 }
 
-/* Navbar Styles */
+/* Navbar styles */
 .navbar {
   font-size: 1.2em;
   font-weight: 500;
@@ -88,7 +90,7 @@ main {
   transform: rotate(90deg);
 }
 
-/* Navbar Links Styling */
+/* Navbar links styling */
 nav a {
   text-decoration: none;
   color: black;
@@ -113,7 +115,7 @@ nav a:hover::after,
   height: 2px;
 }
 
-/* Text Animation Styles */
+/* Text animation styles */
 .ml6 {
   position: relative;
   font-weight: 900;
@@ -140,16 +142,16 @@ nav a:hover::after,
   margin-left: 1rem;
 }
 
-/* New responsive styling for the lightbulb */
+/* Responsive styling for the lightbulb */
 @media (max-width: 768px) {
   .ml6 i.fa-lightbulb {
-    font-size: 2.5rem; /* Slightly smaller for tablets */
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .ml6 i.fa-lightbulb {
-    font-size: 2rem; /* Smaller for mobile devices */
+    font-size: 2rem;
   }
 }
 
@@ -157,7 +159,7 @@ nav a:hover::after,
   color: #FBFBF9;
 }
 
-/* UX Quote Styles */
+/* UX quote styles */
 .ux-quote {
   font-family: 'Georgia', serif;
   font-style: italic;
@@ -166,13 +168,13 @@ nav a:hover::after,
   margin-top: -0.6rem;
 }
 
-/* Featured Examples Section */
+/* Featured examples section */
 .examples h1 {
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
 }
 
-/* Responsive Adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .jumbotron-container {
     padding-top: 15rem;
@@ -202,6 +204,6 @@ nav a:hover::after,
 
   /* Disable hover underline effect on mobile */
   nav a:hover::after {
-    width: 0; /* Remove the underline */
+    width: 0;
   }
 }

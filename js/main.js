@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initArrowAnimation();
   initTextAnimation();
   initScrollSpy();
+  initBackgroundTransition();
 });
 
 // Function to animate floating arrow
@@ -55,7 +56,6 @@ function initScrollSpy() {
   let lastScrollPosition = 0;
 
   function toggleNavbar() {
-    // Only apply scroll-based navbar behavior on larger screens
     if (window.innerWidth > 768) {
       window.addEventListener('scroll', function () {
         const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -77,4 +77,21 @@ function initScrollSpy() {
   toggleNavbar();
   // Re-evaluate on window resize
   window.addEventListener('resize', toggleNavbar);
+}
+
+// Function to handle scroll-based background color transition
+function initBackgroundTransition() {
+  const mainContent = document.body;
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const scrollLimit = document.body.scrollHeight - window.innerHeight;
+
+    // Calculate the scroll percentage
+    const scrollPercentage = Math.min(scrollPosition / scrollLimit, 1);
+
+    // Map scroll percentage to color from black to white
+    const colorValue = Math.floor(scrollPercentage * 255);
+    mainContent.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+  });
 }
