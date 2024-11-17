@@ -176,7 +176,7 @@ nav a:hover::after,
 .examples p {
   font-family: 'Noto-Sans', sans-serif;
   color:white;
-  font-size:1rem;
+  font-size:1.3rem;
 }
 
 .animated-button {
