@@ -100,3 +100,19 @@ function initBackgroundTransition() {
     mainContent.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
   });
 }
+
+document.addEventListener('scroll', () => {
+  const image = document.getElementById('render-autoclone');
+  const scrollY = window.scrollY;
+
+  // Scale down the rotation for a subtle effect
+  const rotationAngle = scrollY * 0.008; // Adjust for more/less rotation
+
+  anime({
+    targets: image,
+    rotate: rotationAngle, // Apply rotation based on scroll position
+    duration: 300, // Smooth transition
+    easing: 'easeOutSine',
+  });
+});
+
