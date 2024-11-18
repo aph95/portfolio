@@ -75,7 +75,7 @@ function initScrollSpy() {
   }
 
   toggleNavbar();
-  // Re-evaluate on window resize
+  // Disables hide navbar on window resize
   window.addEventListener('resize', toggleNavbar);
 }
 
@@ -87,7 +87,7 @@ function initBackgroundTransition() {
   mainContent.style.transition = 'background-color 0.3s ease';
 
   // Define the scroll threshold where color changes (in pixels)
-  const colorChangeThreshold = 100; // You can adjust this threshold value
+  const colorChangeThreshold = 100; 
 
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
@@ -105,12 +105,12 @@ document.addEventListener('scroll', () => {
   const image = document.getElementById('render-autoclone');
   const scrollY = window.scrollY;
 
-  // Scale down the rotation for a subtle effect
+  // Scales down the rotation for a subtle effect
   const rotationAngle = scrollY * 0.008; // Adjust for more/less rotation
 
   anime({
     targets: image,
-    rotate: rotationAngle, // Apply rotation based on scroll position
+    rotate: rotationAngle, // Applies rotation based on scroll position
     duration: 300, // Smooth transition
     easing: 'easeOutSine',
   });
