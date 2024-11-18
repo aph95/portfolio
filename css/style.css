@@ -1,7 +1,8 @@
 /* General body styles */
 /* Set initial background color */
 body {
-  transition: background-color 0.4s ease; /* Smooth transition */
+  transition: background-color 0.4s ease;
+  /* Smooth transition */
 }
 
 main {
@@ -39,9 +40,17 @@ main {
 
 /* Floating arrow animation */
 @keyframes floatAnimation {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Hide arrow on small screens */
@@ -73,8 +82,8 @@ main {
   background: transparent;
 }
 
-.navbar-toggler:focus, 
-.navbar-toggler:active, 
+.navbar-toggler:focus,
+.navbar-toggler:active,
 .navbar-toggler:hover {
   outline: none !important;
   box-shadow: none !important;
@@ -106,10 +115,10 @@ nav a::after {
   transition: width 0.2s;
 }
 
-nav a:hover::after, 
+nav a:hover::after,
 #current-page::after {
   width: 100%;
-  background-color:#222222;
+  background-color: #222222;
   height: 2px;
 }
 
@@ -169,14 +178,20 @@ nav a:hover::after,
 .examples h2 {
   font-weight: 900;
   font-family: 'Noto Sans', sans-serif;
-  color:white;
+  color: white;
 
+}
+
+.examples h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 3.5rem;
 }
 
 .examples p {
   font-family: 'Noto-Sans', sans-serif;
-  color:white;
-  font-size:1.3rem;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .animated-button {
@@ -193,8 +208,8 @@ nav a:hover::after,
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  background-color:#87D4FC;
-  font-weight:900;
+  background-color: #87D4FC;
+  font-weight: 900;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -250,7 +265,7 @@ nav a:hover::after,
   .jumbotron-container {
     padding-left: 5rem;
     padding-right: 5rem;
-    
+
   }
 
   .ml6 {
@@ -262,11 +277,11 @@ nav a:hover::after,
   }
 
   .arrow-image {
-    opacity:0;
+    opacity: 0;
   }
 
   .examples {
-    top:5rem;
+    top: 5rem;
   }
 
 }
