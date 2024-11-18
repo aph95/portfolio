@@ -241,7 +241,7 @@ nav a:hover::after,
 
 .animated-button:active {
   scale: 0.95;
-  box-shadow: 0 0 0 4px greenyellow;
+  box-shadow: 0 0 0 4px rgb(255, 134, 47);
 }
 
 
