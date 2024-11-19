@@ -194,6 +194,11 @@ nav a:hover::after,
   font-size: 1.3rem;
 }
 
+.autoclone-text {
+  font-variant:small-caps; 
+  font-weight:600;
+}
+
 .animated-button {
   align-items: center;
   gap: 4px;
