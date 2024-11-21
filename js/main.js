@@ -55,27 +55,36 @@ function initScrollSpy() {
   const navbar = document.querySelector('.navbar');
   let lastScrollPosition = 0;
 
+  // Function to hide or show navbar based on scroll position
+  function handleNavbarOnScroll() {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Hide navbar on scroll down, show on scroll up
+    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 50) {
+      navbar.style.top = '-100px'; // Hide navbar
+    } else {
+      navbar.style.top = '0'; // Show navbar
+    }
+
+    lastScrollPosition = currentScrollPosition;
+  }
+
+  // Function to toggle navbar behavior based on screen width
   function toggleNavbar() {
     if (window.innerWidth > 768) {
-      window.addEventListener('scroll', function () {
-        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Hide navbar on scroll down, show on scroll up
-        if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 50) {
-          navbar.style.top = '-100px';
-        } else {
-          navbar.style.top = '0';
-        }
-
-        lastScrollPosition = currentScrollPosition;
-      });
+      // Only apply scroll behavior on screens wider than 768px
+      window.addEventListener('scroll', handleNavbarOnScroll);
     } else {
-      navbar.style.top = '0';
+      // For smaller screens, keep navbar fixed
+      navbar.style.top = '0'; // Make sure navbar stays visible
+      window.removeEventListener('scroll', handleNavbarOnScroll); // Remove scroll event listener on smaller screens
     }
   }
 
+  // Initialize navbar behavior
   toggleNavbar();
-  // Disables hide navbar on window resize
+
+  // Re-check navbar behavior on window resize
   window.addEventListener('resize', toggleNavbar);
 }
 
@@ -115,4 +124,3 @@ document.addEventListener('scroll', () => {
     easing: 'easeOutSine',
   });
 });
-
