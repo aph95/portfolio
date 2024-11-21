@@ -87,7 +87,7 @@ function initBackgroundTransition() {
   mainContent.style.transition = 'background-color 0.3s ease';
 
   // Define the scroll threshold where color changes (in pixels)
-  const colorChangeThreshold = 100; 
+  const colorChangeThreshold = 100;
 
   window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
@@ -114,5 +114,20 @@ document.addEventListener('scroll', () => {
     duration: 300, // Smooth transition
     easing: 'easeOutSine',
   });
+});
+
+
+// Splash animation
+
+// Animate splash screen text with Anime.js
+document.addEventListener("DOMContentLoaded", function () {
+  const splashScreen = document.querySelector('.splash-screen');
+  const content = document.querySelector('.content');
+
+  // Set a delay to hide the splash screen after typing completes
+  setTimeout(() => {
+    splashScreen.style.display = 'none';
+    content.style.display = 'block';
+  }, 3000);
 });
 
