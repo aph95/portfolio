@@ -123,11 +123,24 @@ document.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const splashScreen = document.querySelector('.splash-screen');
   const content = document.querySelector('.content');
+  const typingEffect = document.querySelector('.typing-effect');
 
-  // Set a delay to hide the splash screen after typing completes
-  setTimeout(() => {
-    splashScreen.style.display = 'none';
-    content.style.display = 'block';
-  }, 3000);
+  // Anime.js typing effect for the splash screen
+  anime({
+    targets: typingEffect,
+    width: ['0', '17ch'],  // Ensure the typing effect fills the desired length
+    easing: 'steps(20)',
+    duration: 2500,
+    complete: function() {
+      // Add fade-out effect to splash screen after typing is done
+      splashScreen.style.animation = 'fadeOut 1s forwards';
+      
+      // Set a delay to hide the splash screen after fade-out completes
+      setTimeout(() => {
+        splashScreen.style.display = 'none';
+        content.style.display = 'block';
+      }, 1000); // Match this delay with the fade-out duration
+    }
+  });
 });
 

@@ -375,3 +375,13 @@ nav a:hover::after,
     opacity: 1;
   }
 }
+
+/* Fade Out Effect */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
