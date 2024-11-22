@@ -331,6 +331,12 @@ nav a:hover::after,
   color: #ff6347; /* Set this to the color you want for hover */
 }
 
+.message-me {
+  text-decoration:underline;
+  color:#6123D8;
+  font-weight:900;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
