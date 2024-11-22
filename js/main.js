@@ -89,9 +89,10 @@ function initScrollSpy() {
   window.addEventListener('resize', toggleNavbar);
 }
 
-// Function to handle scroll-based background color transition
+// Function to handle scroll-based background color transition and social icon color change
 function initBackgroundTransition() {
   const mainContent = document.body;
+  const socialIcons = document.querySelectorAll('.social-icon'); // Replace with your social icons' class or ID
 
   // Set initial background color and smooth transition for background change
   mainContent.style.transition = 'background-color 0.3s ease';
@@ -106,8 +107,19 @@ function initBackgroundTransition() {
     const scrollPercentage = Math.min(scrollPosition / colorChangeThreshold, 1);
 
     // Gradually change background color as the user scrolls
-    const colorValue = 255 - Math.floor(scrollPercentage * (255 - 34)); // Maps white to #222222
-    mainContent.style.backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+    const colorValue = Math.floor(scrollPercentage * (255 - 34)); // Maps to range 34 to 255
+    mainContent.style.backgroundColor = `rgb(${255 - colorValue}, ${255 - colorValue}, ${255 - colorValue})`; // Smooth transition to dark
+
+    // Change social icons to white when the background color is dark
+    if (colorValue >= 221) {  // Dark enough (near rgb(34, 34, 34))
+      socialIcons.forEach(icon => {
+        icon.style.color = 'white'; // Change social icons to white
+      });
+    } else {
+      socialIcons.forEach(icon => {
+        icon.style.color = ''; // Reset social icons to default color when background is light
+      });
+    }
   });
 }
 
