@@ -291,12 +291,12 @@ nav a:hover::after,
 .contact h2 {
   color:#222222;
   font-weight:900;
-  font-size:4.5rem;
+  font-size:5.5rem;
 }
 
 .contact-details {
   color:#222222;
-  font-size:2rem;
+  font-size:1.5rem;
   font-family: 'Courier';
 }
 
@@ -336,7 +336,6 @@ nav a:hover::after,
   color:#6123D8;
   font-weight:900;
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
