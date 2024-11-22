@@ -194,10 +194,35 @@ nav a:hover::after,
   font-size: 1.3rem;
 }
 
-.autoclone-text {
+/* Swoop-in effect for highlighted projects */
+
+.headline {
+  position: relative;
+  overflow: hidden;
+}
+
+.highlighted, .project {
+  display: inline-block;
+  opacity: 0; /* Start hidden */
+  position: relative;
+}
+
+.highlighted {
+  transform: translateX(-200%); /* Far off to the left */
+}
+
+.project {
+  transform: translateX(200%); /* Far off to the right */
+}
+
+/* Style for start of paragraph */
+
+.kulturkompassen-text {
   font-variant: small-caps;
   font-weight: 600;
 }
+
+/* Style and animation for button */
 
 .animated-button {
   align-items: center;
@@ -263,7 +288,6 @@ nav a:hover::after,
   scale: 0.95;
   box-shadow: 0 0 0 4px rgb(255, 134, 47);
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

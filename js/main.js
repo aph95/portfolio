@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initTextAnimation();
   initScrollSpy();
   initBackgroundTransition();
+  initScrollAnimations();
 });
 
 // Function to animate floating arrow
@@ -57,7 +58,7 @@ function initScrollSpy() {
 
   // Function to hide or show navbar based on scroll position
   function handleNavbarOnScroll() {
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    const currentScrollPosition = window.scrollY || document.documentElement.scrollTop;
 
     // Hide navbar on scroll down, show on scroll up
     if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 50) {
@@ -110,17 +111,51 @@ function initBackgroundTransition() {
   });
 }
 
-document.addEventListener('scroll', () => {
-  const image = document.getElementById('render-autoclone');
-  const scrollY = window.scrollY;
+// Function to handle the swooping text animation based on scroll
+function initScrollAnimations() {
+  const triggerPoint = 200; // Start animation when scrolled 200px down
+  let animationTriggered = false;
 
-  // Scales down the rotation for a subtle effect
-  const rotationAngle = scrollY * 0.008; // Adjust for more/less rotation
+  const animateText = () => {
+    // Animate "HIGHLIGHTED" swooping in from the left
+    anime({
+      targets: '.highlighted',
+      translateX: ['-200%', '0%'], // From far left to center
+      opacity: [0, 1], // Fade in
+      easing: 'easeOutExpo',
+      duration: 1200
+    });
 
-  anime({
-    targets: image,
-    rotate: rotationAngle, // Applies rotation based on scroll position
-    duration: 300, // Smooth transition
-    easing: 'easeOutSine',
+    // Animate "PROJECT" swooping in from the right
+    anime({
+      targets: '.project',
+      translateX: ['200%', '0%'], // From far right to center
+      opacity: [0, 1], // Fade in
+      easing: 'easeOutExpo',
+      duration: 1200,
+      delay: 200 // Slight delay for staggered effect
+    });
+  };
+
+  // Scroll listener to trigger animation once
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > triggerPoint && !animationTriggered) {
+      animationTriggered = true; // Ensure it only triggers once
+      animateText();
+    }
+
+    // Phone rotation effect based on scroll
+    const image = document.getElementById('render-autoclone');
+    const scrollY = window.scrollY;
+
+    // Scales down the rotation for a subtle effect
+    const rotationAngle = scrollY * 0.008; // Adjust for more/less rotation
+
+    anime({
+      targets: image,
+      rotate: rotationAngle, // Applies rotation based on scroll position
+      duration: 300, // Smooth transition
+      easing: 'easeOutSine',
+    });
   });
-});
+}
