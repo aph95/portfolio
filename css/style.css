@@ -282,19 +282,23 @@ nav a:hover::after,
   box-shadow: 0 0 0 4px #6123D8;
 }
 
+.contact-container {
+  margin:0;
+  background-color:white;
+}
+
 .contact h2 {
-  color:white;
+  color:#222222;
   font-weight:900;
   font-size:4.5rem;
 }
 
 .contact-details {
-  color:white;
+  color:#222222;
   font-size:2rem;
   font-family: 'Courier';
 }
 
-/* Container for social icons - fixed at bottom left */
 .social-icons {
   position: fixed;
   bottom: 10px;
@@ -304,27 +308,28 @@ nav a:hover::after,
   transition: color 0.3s ease;
 }
 
-/* Style for each list item inside social-icons */
 .social-icons li {
   display: inline-block;
   margin-right: 10px;
 }
 
-/* Default icon color for light background */
 .white-background .social-icons li i {
-  color: black;
+  color: #222222;
 }
 
-/* Default icon color for dark background */
 .dark-background .social-icons li i {
   color: white;
 }
 
-/* Set the default color of the icons */
-.social-icon {
-  font-size: 2rem; /* Increase font size for better visibility */
-  transition: color 0.3s ease; /* Smooth transition for color change */
+.social-icons .social-icon {
+  transition: color 0.3s ease;
 }
+
+/* Hover effect on social icons */
+.social-icons .social-icon:hover {
+  color: #ff6347; /* Set this to the color you want for hover */
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

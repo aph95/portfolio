@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollSpy();
   initBackgroundTransition();
   initScrollAnimations();
+  initSocialIconsColor();  // Function to manage social icons color on scroll
 });
 
 // Function to animate floating arrow
@@ -92,7 +93,7 @@ function initScrollSpy() {
 // Function to handle scroll-based background color transition and social icon color change
 function initBackgroundTransition() {
   const mainContent = document.body;
-  const socialIcons = document.querySelectorAll('.social-icon'); // Replace with your social icons' class or ID
+  const socialIcons = document.querySelectorAll('.social-icon'); // Get all social icons
 
   // Set initial background color and smooth transition for background change
   mainContent.style.transition = 'background-color 0.3s ease';
@@ -110,15 +111,46 @@ function initBackgroundTransition() {
     const colorValue = Math.floor(scrollPercentage * (255 - 34)); // Maps to range 34 to 255
     mainContent.style.backgroundColor = `rgb(${255 - colorValue}, ${255 - colorValue}, ${255 - colorValue})`; // Smooth transition to dark
 
-    // Change social icons to white when the background color is dark
-    if (colorValue >= 221) {  // Dark enough (near rgb(34, 34, 34))
+    // Change social icons' color based on scroll position
+    if (scrollPosition > colorChangeThreshold) {
+      // Change color to white when scrolled beyond the threshold
       socialIcons.forEach(icon => {
-        icon.style.color = 'white'; // Change social icons to white
+        icon.style.color = '#fff'; // Set social icons to white
       });
     } else {
+      // Change color to #222222 when scrolled back to the top or when background is white
       socialIcons.forEach(icon => {
-        icon.style.color = ''; // Reset social icons to default color when background is light
+        icon.style.color = '#222222'; // Set social icons to #222222 when the background is white
       });
+    }
+  });
+}
+
+// Function to manage social icons color when scrolling past the contact section
+function initSocialIconsColor() {
+  const socialIcons = document.querySelectorAll('.social-icon');
+  const contactSection = document.querySelector('.contact-container');  // Contact section
+
+  window.addEventListener('scroll', function () {
+    const contactSectionTop = contactSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // If the contact section is in view, set social icons to black
+    if (contactSectionTop <= windowHeight && contactSectionTop >= 0) {
+      socialIcons.forEach(icon => {
+        icon.style.color = '#222222';  // Set to black
+      });
+    } else {
+      // Reset the color to black only when scrolled to the top
+      if (window.scrollY === 0) {
+        socialIcons.forEach(icon => {
+          icon.style.color = '#222222'; // Set to black again when at the top
+        });
+      } else {
+        socialIcons.forEach(icon => {
+          icon.style.color = '#fff';  // Set to white when not at the top
+        });
+      }
     }
   });
 }
@@ -129,44 +161,41 @@ function initScrollAnimations() {
   let animationTriggered = false;
 
   const animateText = () => {
-    // Animate "HIGHLIGHTED" swooping in from the left
+    // Animation code for "HIGHLIGHTED" and "PROJECT"
     anime({
       targets: '.highlighted',
-      translateX: ['-200%', '0%'], // From far left to center
-      opacity: [0, 1], // Fade in
+      translateX: ['-200%', '0%'],
+      opacity: [0, 1],
       easing: 'easeOutExpo',
       duration: 1200
     });
 
-    // Animate "PROJECT" swooping in from the right
     anime({
       targets: '.project',
-      translateX: ['200%', '0%'], // From far right to center
-      opacity: [0, 1], // Fade in
+      translateX: ['200%', '0%'],
+      opacity: [0, 1],
       easing: 'easeOutExpo',
       duration: 1200,
-      delay: 200 // Slight delay for staggered effect
+      delay: 200
     });
   };
 
   // Scroll listener to trigger animation once
   window.addEventListener('scroll', () => {
     if (window.scrollY > triggerPoint && !animationTriggered) {
-      animationTriggered = true; // Ensure it only triggers once
+      animationTriggered = true;
       animateText();
     }
 
     // Phone rotation effect based on scroll
     const image = document.getElementById('render-autoclone');
     const scrollY = window.scrollY;
-
-    // Scales down the rotation for a subtle effect
     const rotationAngle = scrollY * 0.008; // Adjust for more/less rotation
 
     anime({
       targets: image,
-      rotate: rotationAngle, // Applies rotation based on scroll position
-      duration: 300, // Smooth transition
+      rotate: rotationAngle,
+      duration: 300,
       easing: 'easeOutSine',
     });
   });
