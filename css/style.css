@@ -53,13 +53,6 @@ main {
   }
 }
 
-/* Hide arrow on small screens */
-@media (max-width: 576px) {
-  .arrow-image {
-    display: none;
-  }
-}
-
 /* Navbar styles */
 .navbar {
   font-size: 1.2em;
@@ -294,7 +287,7 @@ nav a:hover::after,
   .jumbotron-container {
     padding-left: 5rem;
     padding-right: 5rem;
-
+    padding-top:10rem;
   }
 
   .ml6 {
@@ -303,10 +296,6 @@ nav a:hover::after,
 
   .ux-quote {
     font-size: 2rem;
-  }
-
-  .arrow-image {
-    opacity: 0;
   }
 
   .examples {
