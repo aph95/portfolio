@@ -217,15 +217,6 @@ a:hover .image-tags {
   opacity: 1; /* Shows the tags on hover */
 }
 
-.hoverable-image {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.hoverable-image:hover {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}
-
 .tag {
   display: inline-block;
   font-size: 1.5rem;
