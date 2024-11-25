@@ -115,7 +115,7 @@ function initBackgroundTransition() {
     if (scrollPosition > colorChangeThreshold) {
       // Change color to white when scrolled beyond the threshold
       socialIcons.forEach(icon => {
-        icon.style.color = '#fff'; // Set social icons to white
+        icon.style.color = '#E2E2E2'; // Set social icons to white
       });
     } else {
       // Change color to #222222 when scrolled back to the top or when background is white
@@ -148,7 +148,7 @@ function initSocialIconsColor() {
         });
       } else {
         socialIcons.forEach(icon => {
-          icon.style.color = '#fff';  // Set to white when not at the top
+          icon.style.color = '#E2E2E2';  // Set to white when not at the top
         });
       }
     }
@@ -200,3 +200,28 @@ function initScrollAnimations() {
     });
   });
 }
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const marqueeAnimation = () => {
+  const sections = document.querySelectorAll(".marquee");
+  sections.forEach((section) => {
+    const marqueeText = section.querySelector(".marquee-text");
+    const w = marqueeText; // Assign marqueeText element to w
+
+
+    const [x, xEnd] = ['0%', (w.scrollWidth - section.offsetWidth) * -0.5];
+
+    gsap.fromTo(w, { x }, {
+      x: xEnd,
+      scrollTrigger: {
+        trigger: section,
+        scrub: 0.5
+      }
+    });
+  });
+};
+
+
+marqueeAnimation();
