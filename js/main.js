@@ -188,7 +188,7 @@ function initScrollAnimations() {
     }
 
     // Phone rotation effect based on scroll
-    const image = document.getElementById('render-autoclone');
+    const image = document.getElementById('render-kulturkompassen');
     const scrollY = window.scrollY;
     const rotationAngle = scrollY * 0.008; // Adjust for more/less rotation
 
