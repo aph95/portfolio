@@ -117,6 +117,12 @@ nav a::after {
   transition: width 0.2s;
 }
 
+/* Exempts logo from hover effects */
+
+.logo-link::after {
+  content: none; 
+}
+
 nav a:hover::after,
 #current-page::after {
   width: 100%;
