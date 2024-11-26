@@ -96,7 +96,7 @@ function initBackgroundTransition() {
   const socialIcons = document.querySelectorAll('.social-icon'); // Get all social icons
 
   // Set initial background color and smooth transition for background change
-  mainContent.style.transition = 'background-color 0.3s ease';
+  mainContent.style.transition = 'background-color 1s ease';
 
   // Define the scroll threshold where color changes (in pixels)
   const colorChangeThreshold = 100;
@@ -217,7 +217,7 @@ const marqueeAnimation = () => {
       x: xEnd,
       scrollTrigger: {
         trigger: section,
-        scrub: 1.4,
+        scrub: 1.0,
       }
     });
   });
