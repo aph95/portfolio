@@ -213,6 +213,10 @@ nav a:hover::after,
   display: inline-block;
 }
 
+.image-container img {
+  border-radius:2rem;
+}
+
 .image-tags {
   position: absolute;
   bottom: 10px; /* Keeps tags near the bottom */
@@ -223,6 +227,7 @@ nav a:hover::after,
   transition: opacity 0.3s ease;
   pointer-events: none; /* Prevents accidental hover interactions */
   flex-wrap: wrap; /* Allows tags to wrap onto the next line if needed */
+  border-radius:2rem;
 }
 
 a:hover .image-tags {
