@@ -167,6 +167,14 @@ nav a:hover::after,
   color: #222222;
 }
 
+.ux-quote {
+  font-size: 1.8rem;
+  font-family:'Courier New', Courier, monospace;
+  letter-spacing:-0.8px;
+  font-style:italic;
+  margin-top:-20px;
+}
+
 .marquee {
   background-color: #222222;
   color: #e2e2e2;
@@ -411,8 +419,9 @@ footer h4 {
     font-size: 4.7em;
   }
 
-  .ux-quote {
+  .ux-quote h3 {
     font-size: 2rem;
+    font-family:'Courier New', Courier, monospace;
   }
 
   .examples {
@@ -433,6 +442,7 @@ footer h4 {
 
   .ux-quote {
     font-size: 1.8rem;
+    font-family:'Courier New', Courier, monospace;
   }
 
   /* Disable hover underline effect on mobile */
