@@ -211,7 +211,7 @@ const marqueeAnimation = () => {
     const w = marqueeText; // Assign marqueeText element to w
 
 
-    const [x, xEnd] = ['0%', (w.scrollWidth - section.offsetWidth) * -0.7];
+    const [x, xEnd] = ['0%', (w.scrollWidth - section.offsetWidth) * -0.5];
 
     gsap.fromTo(w, { x }, {
       x: xEnd,
