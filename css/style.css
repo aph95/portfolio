@@ -396,6 +396,7 @@ footer {
 footer h4 {
   color:#e2e2e2;
   font-family:'Courier New', Courier, monospace;
+  font-size:1.2rem;
 }
 
 /* Responsive adjustments */
