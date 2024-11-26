@@ -147,10 +147,12 @@ nav a:hover::after,
 .ml6 i.fa-lightbulb {
   font-size: 6rem;
   background: linear-gradient(#6123D8, #a072e1);
-  -webkit-background-clip: text;
+  background-clip: text;         
+  -webkit-background-clip: text;  
   -webkit-text-fill-color: transparent;
   margin-left: 1rem;
 }
+
 
 
 /* Responsive styling for the lightbulb */
