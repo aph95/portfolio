@@ -407,11 +407,14 @@ a:hover .image-tags {
   color:#e2e2e2;
   font-family:'Courier New', Courier, monospace;
   font-weight:900;
+  font-size:2rem;
 }
 
-.contact-details h4 {
+.contact-details h4, a {
   color:#e2e2e2;
   font-family:'Courier New', Courier, monospace;
+  font-size:1.5rem;
+  text-decoration: none;
 }
 
 .contact-details i {
