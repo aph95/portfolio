@@ -238,7 +238,7 @@ nav a:hover::after,
 .image-tags {
   position: absolute;
   bottom: 10px; /* Keeps tags near the bottom */
-  left: 10px;   /* Aligns tags to the left */
+  left: 20px;   /* Aligns tags to the left */
   display: flex; /* Aligns tags horizontally */
   gap: 8px;     /* Adds spacing between tags */
   opacity: 0;   /* Hidden by default */
