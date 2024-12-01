@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-html, body {
-  height:100%;
-  margin:0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
+
 /* General body styles */
 /* Set initial background color */
 body {
@@ -120,7 +122,7 @@ nav a::after {
 /* Exempts logo from hover effects */
 
 .logo-link::after {
-  content: none; 
+  content: none;
 }
 
 nav a:hover::after,
@@ -154,8 +156,8 @@ nav a:hover::after,
 .ml6 i.fa-lightbulb {
   font-size: 6rem;
   background: linear-gradient(#6123D8, #a072e1);
-  background-clip: text;         
-  -webkit-background-clip: text;  
+  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-left: 1rem;
 }
@@ -181,10 +183,10 @@ nav a:hover::after,
 
 .ux-quote {
   font-size: 1.8rem;
-  font-family:'Courier New', Courier, monospace;
-  letter-spacing:-0.8px;
-  font-style:italic;
-  margin-top:-20px;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: -0.8px;
+  font-style: italic;
+  margin-top: -20px;
 }
 
 .marquee {
@@ -203,7 +205,7 @@ nav a:hover::after,
 }
 
 .purple {
-  color:#6123D8;
+  color: #6123D8;
 }
 
 .examples h2 {
@@ -232,24 +234,32 @@ nav a:hover::after,
 }
 
 .image-container img {
-  border-radius:2rem;
+  border-radius: 2rem;
 }
 
 .image-tags {
   position: absolute;
-  bottom: 10px; /* Keeps tags near the bottom */
-  left: 20px;   /* Aligns tags to the left */
-  display: flex; /* Aligns tags horizontally */
-  gap: 8px;     /* Adds spacing between tags */
-  opacity: 0;   /* Hidden by default */
+  bottom: 10px;
+  /* Keeps tags near the bottom */
+  left: 20px;
+  /* Aligns tags to the left */
+  display: flex;
+  /* Aligns tags horizontally */
+  gap: 8px;
+  /* Adds spacing between tags */
+  opacity: 0;
+  /* Hidden by default */
   transition: opacity 0.3s ease;
-  pointer-events: none; /* Prevents accidental hover interactions */
-  flex-wrap: wrap; /* Allows tags to wrap onto the next line if needed */
-  border-radius:2rem;
+  pointer-events: none;
+  /* Prevents accidental hover interactions */
+  flex-wrap: wrap;
+  /* Allows tags to wrap onto the next line if needed */
+  border-radius: 2rem;
 }
 
 a:hover .image-tags {
-  opacity: 1; /* Shows the tags on hover */
+  opacity: 1;
+  /* Shows the tags on hover */
 }
 
 .tag {
@@ -260,7 +270,7 @@ a:hover .image-tags {
   padding: 5px 10px;
   border-radius: 15px;
   transition: transform 0.2s ease;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .tag:hover {
@@ -275,20 +285,24 @@ a:hover .image-tags {
   overflow: hidden;
 }
 
-.highlighted, .project {
+.highlighted,
+.project {
   display: inline-block;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   position: relative;
-  color:#e2e2e2;
+  color: #e2e2e2;
 }
 
 .highlighted {
-  transform: translateX(-200%); /* Far off to the left */
+  transform: translateX(-200%);
+  /* Far off to the left */
 }
 
 .project {
-  transform: translateX(200%); /* Far off to the right */
-  color:#e2e2e2;
+  transform: translateX(200%);
+  /* Far off to the right */
+  color: #e2e2e2;
 }
 
 /* Style for start of paragraph */
@@ -393,27 +407,29 @@ a:hover .image-tags {
 
 /* Hover effect on social icons */
 .social-icons .social-icon:hover {
-  color: #ff6347; /* Set this to the color you want for hover */
+  color: #ff6347;
+  /* Set this to the color you want for hover */
 }
 
 .contact-details h1 {
-  font-weight:900;
-  font-size:3.5rem;
-  text-align:center;
-  color:#e2e2e2;
+  font-weight: 900;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #e2e2e2;
 }
 
 .contact-details h3 {
-  color:#e2e2e2;
-  font-family:'Courier New', Courier, monospace;
-  font-weight:900;
-  font-size:2rem;
+  color: #e2e2e2;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-size: 2rem;
 }
 
-.contact-details h4, a {
-  color:#e2e2e2;
-  font-family:'Courier New', Courier, monospace;
-  font-size:1.5rem;
+.contact-details h4,
+a {
+  color: #e2e2e2;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -423,13 +439,13 @@ a:hover .image-tags {
 
 footer {
   background: linear-gradient(to bottom, #222222, rgb(21, 21, 21));
-  margin-top:auto;
+  margin-top: auto;
 }
 
 footer h4 {
-  color:#e2e2e2;
-  font-family:'Courier New', Courier, monospace;
-  font-size:1.2rem;
+  color: #e2e2e2;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
 }
 
 /* Responsive adjustments */
@@ -437,7 +453,7 @@ footer h4 {
   .jumbotron-container {
     padding-left: 5rem;
     padding-right: 5rem;
-    padding-top:10rem;
+    padding-top: 10rem;
   }
 
   .ml6 {
@@ -446,7 +462,7 @@ footer h4 {
 
   .ux-quote h3 {
     font-size: 2rem;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .examples {
@@ -467,7 +483,7 @@ footer h4 {
 
   .ux-quote {
     font-size: 1.8rem;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   /* Disable hover underline effect on mobile */
@@ -492,43 +508,55 @@ footer h4 {
 .jumbotron-portfolio h1 {
   font-weight: 900;
   font-size: 8.3em;
-  margin: 0; /* Remove extra margins */
-  line-height: 0.78; /* Control vertical spacing */
+  margin: 0;
+  /* Remove extra margins */
+  line-height: 0.78;
+  /* Control vertical spacing */
 }
 
 .jumbotron-portfolio .row {
-  margin-bottom: 1rem; /* Add spacing between rows if needed */
+  margin-bottom: 1rem;
+  /* Add spacing between rows if needed */
 }
 
 .jumbotron-portfolio .col-auto {
-  padding-right: 1rem; /* Adjust spacing between KULTUR and KOMPASSEN */
+  padding-right: 1rem;
+  /* Adjust spacing between KULTUR and KOMPASSEN */
 }
 
 .portfolio-description {
-  font-weight:900;
-  color:#222222;
+  font-weight: 900;
+  color: #222222;
 }
 
 .collab-links {
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 
 .phone-container {
-  position: absolute;
-  top: 55%; /* Vertically center */
-  right: -30%; /* Move the phone image to the left */
-  transform: translateY(-50%); /* Adjust the vertical alignment */
-  overflow: hidden; /* Ensure the image gets cut off */
+  position: fixed;
+  top: 50%;
+  right: -30%;
+  transform: translateY(-50%);
+  z-index: 1;
+  /* Adjust to make it visible */
+  pointer-events: none;
+  overflow: hidden;
 }
+
 
 .phone-image {
-  width: 70vw; /* Make the phone image take up 50% of the viewport width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the area without distorting the image */
+  width: 70vw;
+  /* Adapt size to viewport width */
+  height: auto;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Prevent distortion */
 }
 
+
 .case-study {
-  background-color:#222222;
+  background-color: #222222;
 
 }
