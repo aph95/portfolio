@@ -480,3 +480,55 @@ footer h4 {
   transition: transform 0.1s ease-out;
   width: 38rem;
 }
+
+/* Portfolio page */
+
+.jumbotron-portfolio {
+  background-color: #E2E2E2;
+  height: 100vh;
+  padding-top: 25rem;
+}
+
+.jumbotron-portfolio h1 {
+  font-weight: 900;
+  font-size: 8.3em;
+  margin: 0; /* Remove extra margins */
+  line-height: 0.78; /* Control vertical spacing */
+}
+
+.jumbotron-portfolio .row {
+  margin-bottom: 1rem; /* Add spacing between rows if needed */
+}
+
+.jumbotron-portfolio .col-auto {
+  padding-right: 1rem; /* Adjust spacing between KULTUR and KOMPASSEN */
+}
+
+.portfolio-description {
+  font-weight:900;
+  color:#222222;
+}
+
+.collab-links {
+  text-decoration:underline;
+}
+
+
+.phone-container {
+  position: absolute;
+  top: 55%; /* Vertically center */
+  right: -30%; /* Move the phone image to the left */
+  transform: translateY(-50%); /* Adjust the vertical alignment */
+  overflow: hidden; /* Ensure the image gets cut off */
+}
+
+.phone-image {
+  width: 70vw; /* Make the phone image take up 50% of the viewport width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without distorting the image */
+}
+
+.case-study {
+  background-color:#222222;
+
+}
