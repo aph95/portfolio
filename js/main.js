@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initScrollSpy();
   initBackgroundTransition();
   initScrollAnimations();
-  initSocialIconsColor();  // Function to manage social icons color on scroll
+  initSocialIconsColor();
 });
 
 // Function to animate floating arrow
@@ -236,3 +236,27 @@ const marqueeAnimation = () => {
 };
 
 marqueeAnimation();
+
+function toggleSocialIconsColorOnScroll() {
+  const socialIcons = document.querySelectorAll('.social-icon');
+  const caseStudySection = document.querySelector('.case-study');
+
+  window.addEventListener('scroll', () => {
+    const caseStudyTop = caseStudySection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Check if the .case-study is in view
+    if (caseStudyTop < windowHeight && caseStudyTop > 0) {
+      socialIcons.forEach(icon => {
+        icon.style.color = '#E2E2E2'; // Light color when in view
+      });
+    } else {
+      socialIcons.forEach(icon => {
+        icon.style.color = '#222222'; // Original color when out of view
+      });
+    }
+  });
+}
+
+// Call the function
+toggleSocialIconsColorOnScroll();

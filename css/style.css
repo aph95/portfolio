@@ -414,18 +414,6 @@ a:hover .image-tags {
   margin-right: 10px;
 }
 
-.white-background .social-icons li i {
-  color: #222222;
-}
-
-.dark-background .social-icons li i {
-  color: white;
-}
-
-.social-icons .social-icon {
-  transition: color 0.3s ease;
-}
-
 .contact-details h1 {
   font-weight: 900;
   font-size: 3.5rem;
