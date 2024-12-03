@@ -210,7 +210,6 @@ const marqueeAnimation = () => {
     const marqueeText = section.querySelector(".marquee-text");
     const w = marqueeText; // Assign marqueeText element to w
 
-
     const [x, xEnd] = ['0%', (w.scrollWidth - section.offsetWidth) * -0.3];
 
     gsap.fromTo(w, { x }, {
@@ -222,6 +221,5 @@ const marqueeAnimation = () => {
     });
   });
 };
-
 
 marqueeAnimation();

@@ -405,12 +405,6 @@ a:hover .image-tags {
   transition: color 0.3s ease;
 }
 
-/* Hover effect on social icons */
-.social-icons .social-icon:hover {
-  color: #ff6347;
-  /* Set this to the color you want for hover */
-}
-
 .contact-details h1 {
   font-weight: 900;
   font-size: 3.5rem;
@@ -509,9 +503,7 @@ footer h4 {
   font-weight: 900;
   font-size: 8.3em;
   margin: 0;
-  /* Remove extra margins */
   line-height: 0.78;
-  /* Control vertical spacing */
 }
 
 .jumbotron-portfolio .row {
@@ -535,7 +527,7 @@ footer h4 {
 
 
 .phone-container {
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: -30%;
   transform: translateY(-50%);
@@ -558,5 +550,26 @@ footer h4 {
 
 .case-study {
   background-color: #222222;
+}
 
+.case-study h2 {
+  color:#e2e2e2;
+  font-weight: 900;
+  font-size: 5.3em;
+  line-height:0.78;
+}
+
+.case-study p {
+  color:#E2E2E2;
+}
+
+.puzzle {
+  color:#6123D8;
+}
+
+.case-study h3 {
+  color:#e2e2e2;
+  font-weight: 900;
+  font-size: 4.3em;
+  line-height:0.78;
 }
