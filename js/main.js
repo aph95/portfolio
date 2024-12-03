@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initialize animations
   initArrowAnimation();
+  initIslandAnimation();
   initTextAnimation();
   initScrollSpy();
   initBackgroundTransition();
@@ -17,6 +18,18 @@ function initArrowAnimation() {
   anime({
     targets: '.arrow-image',
     translateY: [-20, 20],
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    duration: 1000,
+    loop: true,
+  });
+}
+
+// Function to animate floating arrow
+function initIslandAnimation() {
+  anime({
+    targets: '.floating-island',
+    translateY: [-10, 10],
     direction: 'alternate',
     easing: 'easeInOutSine',
     duration: 1000,
