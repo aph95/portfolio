@@ -562,23 +562,42 @@ footer h4 {
 }
 
 .case-study h2 {
-  color:#e2e2e2;
+  color: #e2e2e2;
   font-weight: 900;
   font-size: 5.3em;
-  line-height:0.78;
+  line-height: 0.78;
 }
 
 .case-study p {
-  color:#E2E2E2;
+  color: #E2E2E2;
 }
 
 .puzzle {
-  color:#6123D8;
+  color: #6123D8;
 }
 
 .case-study h3 {
-  color:#e2e2e2;
+  color: #e2e2e2;
   font-weight: 900;
   font-size: 4.3em;
-  line-height:0.78;
+  line-height: 0.78;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1380px) {
+
+  .jumbotron-portfolio h1 {
+    font-size: 4rem;
+  }
+
+}
+
+@media (max-width: 1268px) {
+  .jumbotron-portfolio {
+    font-size: 3rem;
+  }
+
+  .phone-container img {
+    visibility: hidden;
+  }
 }
