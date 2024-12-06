@@ -568,6 +568,10 @@ footer h4 {
   line-height: 0.78;
 }
 
+.case-study h5 {
+  color:#E2E2E2;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .case-study p, ul {
   color: #E2E2E2;
