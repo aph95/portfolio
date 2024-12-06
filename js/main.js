@@ -240,19 +240,27 @@ marqueeAnimation();
 function toggleSocialIconsColorOnScroll() {
   const socialIcons = document.querySelectorAll('.social-icon');
   const caseStudySection = document.querySelector('.case-study');
+  const jumbotronPortfolio = document.querySelector('.jumbotron-portfolio');
 
   window.addEventListener('scroll', () => {
     const caseStudyTop = caseStudySection.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
+    const jumbotronBottom = jumbotronPortfolio.getBoundingClientRect().bottom;
 
-    // Check if the .case-study is in view
-    if (caseStudyTop < windowHeight && caseStudyTop > 0) {
+    // Check if the user has scrolled past the .jumbotron-portfolio
+    if (jumbotronBottom < 0) {
       socialIcons.forEach(icon => {
-        icon.style.color = '#E2E2E2'; // Light color when in view
+        icon.style.color = '#E2E2E2'; // Set to white once out of jumbotron
       });
     } else {
       socialIcons.forEach(icon => {
-        icon.style.color = '#222222'; // Original color when out of view
+        icon.style.color = '#222222'; // Original color within jumbotron
+      });
+    }
+
+    // Ensure icons remain white when .case-study is in view
+    if (caseStudyTop < window.innerHeight && caseStudyTop > 0) {
+      socialIcons.forEach(icon => {
+        icon.style.color = '#E2E2E2'; // Ensure white color within case-study
       });
     }
   });
