@@ -277,9 +277,9 @@ function animateBoxes() {
       targets: '.need-box',
       opacity: [0, 1], // Fade in
       translateY: [200, 0], // Slide up
-      delay: anime.stagger(200), // Stagger each box animation
+      delay: anime.stagger(400), // Stagger each box animation
       easing: 'easeOutExpo',
-      duration: 800, // Animation duration for each box
+      duration: 1100, // Animation duration for each box
   });
 }
 
