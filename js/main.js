@@ -268,3 +268,30 @@ function toggleSocialIconsColorOnScroll() {
 
 // Call the function
 toggleSocialIconsColorOnScroll();
+
+// script.js
+
+// Function to animate boxes
+function animateBoxes() {
+  anime({
+      targets: '.need-box',
+      opacity: [0, 1], // Fade in
+      translateY: [200, 0], // Slide up
+      delay: anime.stagger(200), // Stagger each box animation
+      easing: 'easeOutExpo',
+      duration: 800, // Animation duration for each box
+  });
+}
+
+// Trigger animation on scroll
+let hasAnimated = false;
+
+window.addEventListener('scroll', () => {
+  const triggerPoint = document.querySelector('.needs-container').getBoundingClientRect().top;
+  const viewportHeight = window.innerHeight;
+
+  if (triggerPoint < viewportHeight && !hasAnimated) {
+      animateBoxes();
+      hasAnimated = true; // Ensure animation only happens once
+  }
+});
