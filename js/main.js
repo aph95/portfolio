@@ -295,3 +295,63 @@ window.addEventListener('scroll', () => {
       hasAnimated = true; // Ensure animation only happens once
   }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const ctx = document.getElementById('goalChart').getContext('2d');
+  
+  new Chart(ctx, {
+      type: 'pie', // Pie chart type
+      data: {
+          labels: ['Accessibility and visibility', 'Engagement and motivation', 'Learning and pedagogy'], // Labels for each section
+          datasets: [{
+              data: [33.3, 33.3, 33.3], // Values for each goal (adjust percentages as needed)
+              backgroundColor: [
+                  'rgba(128, 0, 128, 0.7)', // Dark purple for Accessibility
+                  'rgba(153, 50, 204, 0.7)', // Medium purple for Engagement
+                  'rgba(186, 85, 211, 0.7)'  // Light purple for Learning
+              ],
+              borderColor: [
+                  'rgba(128, 0, 128, 1)',
+                  'rgba(153, 50, 204, 1)',
+                  'rgba(186, 85, 211, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          responsive: true, // Ensures the chart adjusts to screen size
+          plugins: {
+              legend: {
+                  display: true, // Enable the legend to show labels at the top
+                  position: 'top', // Position the legend at the top
+                  labels: {
+                      boxWidth: 20, // Customize the width of the legend box
+                      font: {
+                          size: 14, // Customize font size for the legend labels
+                          family: 'DM Sans', // Apply DM Sans font
+                          weight: 'bold'
+                      },
+                      color: '#E2E2E2' // Set the label color to match your theme
+                  },
+                  onClick: function (e) { // Disable clicking on legend
+                      e.stopImmediatePropagation(); // Prevent legend interaction
+                  },
+                  padding: 30 // Add more space between the legend and the chart
+              },
+              tooltip: {
+                  enabled: false, // disables tooltips
+              },
+          },
+          interaction: {
+              mode: 'nearest', // Enable hover interactions on the pie chart
+              intersect: false, // Ensures interactions happen even when hovering above slices
+          },
+          animation: {
+              animateScale: true, // Adds animation to the pie chart when it loads
+              animateRotate: true
+          },
+      }
+  });
+});
