@@ -297,7 +297,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const ctx = document.getElementById('goalChart').getContext('2d');
   
@@ -355,3 +354,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
+// Highlight current page link in navbar
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  }
+});
+
+// Example: Log a message to console (for testing purposes)
+console.log("Shared JavaScript loaded.");
