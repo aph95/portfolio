@@ -363,5 +363,19 @@ navLinks.forEach(link => {
   }
 });
 
-// Example: Log a message to console (for testing purposes)
-console.log("Shared JavaScript loaded.");
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const image1 = document.getElementById('render1');
+  const image2 = document.getElementById('render2');
+
+  // Apply rotation gradually as the user scrolls
+  const rotationAngle = scrollY * 0.008; // Adjust for rotation speed
+
+  anime({
+    targets: [image1, image2],
+    rotate: rotationAngle,
+    translateX: (el, index) => (index === 0 ? scrollY / 5 : -scrollY / 5), // Spread effect
+    duration: 0,  // Set duration to 0 for continuous smooth animation
+    easing: 'linear',
+  });
+});
