@@ -363,19 +363,30 @@ navLinks.forEach(link => {
   }
 });
 
+const image1 = document.getElementById('render1');
+const image2 = document.getElementById('render2');
+
 window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const image1 = document.getElementById('render1');
-  const image2 = document.getElementById('render2');
+    const scrollY = window.scrollY;
+    
+    // Adjust the multiplier for each image separately
+    const translateYValue1 = scrollY * 0.005; // Slower movement for render1
+    const translateYValue2 = scrollY * 0.04;  // Faster movement for render2
 
-  // Apply rotation gradually as the user scrolls
-  const rotationAngle = scrollY * 0.008; // Adjust for rotation speed
+    // Animate render1
+    anime({
+        targets: image1,
+        translateY: translateYValue1,
+        duration: 300,
+        easing: 'easeOutSine',
+    });
 
-  anime({
-    targets: [image1, image2],
-    rotate: rotationAngle,
-    translateX: (el, index) => (index === 0 ? scrollY / 5 : -scrollY / 5), // Spread effect
-    duration: 0,  // Set duration to 0 for continuous smooth animation
-    easing: 'linear',
-  });
+    // Animate render2
+    anime({
+        targets: image2,
+        translateY: translateYValue2,
+        duration: 300,
+        easing: 'easeOutSine',
+    });
 });
+

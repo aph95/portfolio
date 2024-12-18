@@ -639,9 +639,31 @@ footer h4 {
   background-color: #ab47bc;
 }
 
+.design-challenge {
+  margin-bottom:10rem;
+}
+
+.gamified-elements {
+  margin-top:20rem;
+}
+
 .rotating-images {
-  display: flex;
-  align-items: center; 
+  position: relative;
+  top: 0;
+  left: 10rem;
+}
+
+#render1 {
+  position: relative;
+  top: 0;
+  left: 19rem;
+
+} 
+
+#render2 {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
 }
 
 
