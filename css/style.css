@@ -639,32 +639,34 @@ footer h4 {
   background-color: #ab47bc;
 }
 
-.design-challenge {
-  margin-bottom:10rem;
+.middle-container {
+  background:#E2E2E2;
+  height:100vh;
 }
 
+
+
 .gamified-elements {
-  margin-top:20rem;
+  margin-top:10rem;
+}
+
+.middle-container {
+  display: flex; /* Enable Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative; /* Maintain positioning context */
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #222222;
 }
 
 .rotating-images {
-  position: relative;
-  top: 0;
-  left: 10rem;
+  position: relative; /* Keep relative positioning for child elements */
 }
 
-#render1 {
-  position: relative;
-  top: 0;
-  left: 19rem;
 
-} 
 
-#render2 {
-  position: absolute;
-  top: 3rem;
-  left: 3rem;
-}
+
 
 
 
@@ -685,4 +687,14 @@ footer h4 {
   .phone-container img {
     visibility: hidden;
   }
+
+  .middle-container {
+    display: none;
+  }
+
+  .gamified-elements {
+    margin-top:0rem;
+  }
+
 }
+

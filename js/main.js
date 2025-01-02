@@ -370,8 +370,8 @@ window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     
     // Adjust the multiplier for each image separately
-    const translateYValue1 = scrollY * 0.005; // Slower movement for render1
-    const translateYValue2 = scrollY * 0.04;  // Faster movement for render2
+    const translateYValue1 = scrollY * 0.02; // Slower movement for render1
+    const translateYValue2 = scrollY * 0.05;  // Faster movement for render2
 
     // Animate render1
     anime({
