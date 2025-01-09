@@ -472,6 +472,10 @@ footer h4 {
     top: 5rem;
   }
 
+  #headline-projects {
+    font-size:3rem;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -569,7 +573,7 @@ footer h4 {
 }
 
 .case-study h5 {
-  color:#E2E2E2;
+  color: #E2E2E2;
   font-family: 'DM Sans', Geneva, Verdana, sans-serif;
 }
 
@@ -577,7 +581,8 @@ footer h4 {
   font-family: 'DM Sans', Geneva, Verdana, sans-serif;
 }
 
-.case-study p, ul {
+.case-study p,
+ul {
   color: #E2E2E2;
   font-family: 'DM Sans', Geneva, Verdana, sans-serif;
 }
@@ -608,15 +613,15 @@ footer h4 {
   width: 10rem;
   height: 7.4rem;
   border-radius: 20px;
-  opacity: 0; 
+  opacity: 0;
   transform: translateY(200px);
   font-family: 'DM Sans', Geneva, Verdana, sans-serif;
-  font-weight:700;
-  padding:2rem;
-  text-align:center;
-  color:#E2E2E2;
-  font-size:1.5rem;
-  line-height:1.1;
+  font-weight: 700;
+  padding: 2rem;
+  text-align: center;
+  color: #E2E2E2;
+  font-size: 1.5rem;
+  line-height: 1.1;
 }
 
 .need-box[data-need="Decisive needs"] {
@@ -640,35 +645,34 @@ footer h4 {
 }
 
 .middle-container {
-  background:#E2E2E2;
-  height:100vh;
+  background: #E2E2E2;
+  height: 100vh;
 }
 
-
-
 .gamified-elements {
-  margin-top:10rem;
+  margin-top: 10rem;
 }
 
 .middle-container {
-  display: flex; /* Enable Flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  position: relative; /* Maintain positioning context */
-  width: 100%; /* Full width */
-  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  /* Enable Flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  position: relative;
+  /* Maintain positioning context */
+  width: 100%;
+  /* Full width */
+  min-height: 100vh;
+  /* Full viewport height */
   background-color: #222222;
 }
 
 .rotating-images {
-  position: relative; /* Keep relative positioning for child elements */
+  position: relative;
+  /* Keep relative positioning for child elements */
 }
-
-
-
-
-
-
 
 /* Responsive adjustments */
 @media (max-width: 1380px) {
@@ -693,8 +697,53 @@ footer h4 {
   }
 
   .gamified-elements {
-    margin-top:0rem;
+    margin-top: 0rem;
   }
 
 }
 
+.jumbotron-about {
+  background-color: #E2E2E2;
+  height: 100vh;
+  padding-top: 25rem;
+}
+
+.jumbotron-about h1 {
+  font-weight: 900;
+  font-size: 8.3em;
+  margin: 0;
+  line-height: 0.78;
+}
+
+.about {
+  background-color:#222222;
+}
+
+.lm-timeline-title::before {
+  background-color: #6123D8 !important;
+  border-color: #6123D8 !important;
+}
+
+.lm-timeline {
+  font-family: 'Noto Sans', sans-serif;
+  font-size:1.05rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b0b0b0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #565656;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6123D8
+}

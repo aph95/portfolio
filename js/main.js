@@ -274,12 +274,12 @@ toggleSocialIconsColorOnScroll();
 // Function to animate boxes
 function animateBoxes() {
   anime({
-      targets: '.need-box',
-      opacity: [0, 1], // Fade in
-      translateY: [200, 0], // Slide up
-      delay: anime.stagger(400), // Stagger each box animation
-      easing: 'easeOutExpo',
-      duration: 1100, // Animation duration for each box
+    targets: '.need-box',
+    opacity: [0, 1], // Fade in
+    translateY: [200, 0], // Slide up
+    delay: anime.stagger(400), // Stagger each box animation
+    easing: 'easeOutExpo',
+    duration: 1100, // Animation duration for each box
   });
 }
 
@@ -291,67 +291,67 @@ window.addEventListener('scroll', () => {
   const viewportHeight = window.innerHeight;
 
   if (triggerPoint < viewportHeight && !hasAnimated) {
-      animateBoxes();
-      hasAnimated = true; // Ensure animation only happens once
+    animateBoxes();
+    hasAnimated = true; // Ensure animation only happens once
   }
 });
 
 
 document.addEventListener("DOMContentLoaded", function () {
   const ctx = document.getElementById('goalChart').getContext('2d');
-  
+
   new Chart(ctx, {
-      type: 'pie', // Pie chart type
-      data: {
-          labels: ['Accessibility and visibility', 'Engagement and motivation', 'Learning and pedagogy'], // Labels for each section
-          datasets: [{
-              data: [33.3, 33.3, 33.3], // Values for each goal (adjust percentages as needed)
-              backgroundColor: [
-                  'rgba(128, 0, 128, 0.7)', // Dark purple for Accessibility
-                  'rgba(153, 50, 204, 0.7)', // Medium purple for Engagement
-                  'rgba(186, 85, 211, 0.7)'  // Light purple for Learning
-              ],
-              borderColor: [
-                  'rgba(128, 0, 128, 1)',
-                  'rgba(153, 50, 204, 1)',
-                  'rgba(186, 85, 211, 1)'
-              ],
-              borderWidth: 1
-          }]
+    type: 'pie', // Pie chart type
+    data: {
+      labels: ['Accessibility and visibility', 'Engagement and motivation', 'Learning and pedagogy'], // Labels for each section
+      datasets: [{
+        data: [33.3, 33.3, 33.3], // Values for each goal (adjust percentages as needed)
+        backgroundColor: [
+          'rgba(128, 0, 128, 0.7)', // Dark purple for Accessibility
+          'rgba(153, 50, 204, 0.7)', // Medium purple for Engagement
+          'rgba(186, 85, 211, 0.7)'  // Light purple for Learning
+        ],
+        borderColor: [
+          'rgba(128, 0, 128, 1)',
+          'rgba(153, 50, 204, 1)',
+          'rgba(186, 85, 211, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true, // Ensures the chart adjusts to screen size
+      plugins: {
+        legend: {
+          display: true, // Enable the legend to show labels at the top
+          position: 'top', // Position the legend at the top
+          labels: {
+            boxWidth: 20, // Customize the width of the legend box
+            font: {
+              size: 14, // Customize font size for the legend labels
+              family: 'DM Sans', // Apply DM Sans font
+              weight: 'bold'
+            },
+            color: '#E2E2E2' // Set the label color to match your theme
+          },
+          onClick: function (e) { // Disable clicking on legend
+            e.stopImmediatePropagation(); // Prevent legend interaction
+          },
+          padding: 30 // Add more space between the legend and the chart
+        },
+        tooltip: {
+          enabled: false, // disables tooltips
+        },
       },
-      options: {
-          responsive: true, // Ensures the chart adjusts to screen size
-          plugins: {
-              legend: {
-                  display: true, // Enable the legend to show labels at the top
-                  position: 'top', // Position the legend at the top
-                  labels: {
-                      boxWidth: 20, // Customize the width of the legend box
-                      font: {
-                          size: 14, // Customize font size for the legend labels
-                          family: 'DM Sans', // Apply DM Sans font
-                          weight: 'bold'
-                      },
-                      color: '#E2E2E2' // Set the label color to match your theme
-                  },
-                  onClick: function (e) { // Disable clicking on legend
-                      e.stopImmediatePropagation(); // Prevent legend interaction
-                  },
-                  padding: 30 // Add more space between the legend and the chart
-              },
-              tooltip: {
-                  enabled: false, // disables tooltips
-              },
-          },
-          interaction: {
-              mode: 'nearest', // Enable hover interactions on the pie chart
-              intersect: false, // Ensures interactions happen even when hovering above slices
-          },
-          animation: {
-              animateScale: true, // Adds animation to the pie chart when it loads
-              animateRotate: true
-          },
-      }
+      interaction: {
+        mode: 'nearest', // Enable hover interactions on the pie chart
+        intersect: false, // Ensures interactions happen even when hovering above slices
+      },
+      animation: {
+        animateScale: true, // Adds animation to the pie chart when it loads
+        animateRotate: true
+      },
+    }
   });
 });
 
@@ -367,26 +367,82 @@ const image1 = document.getElementById('render1');
 const image2 = document.getElementById('render2');
 
 window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    
-    // Adjust the multiplier for each image separately
-    const translateYValue1 = scrollY * 0.02; // Slower movement for render1
-    const translateYValue2 = scrollY * 0.05;  // Faster movement for render2
+  const scrollY = window.scrollY;
 
-    // Animate render1
-    anime({
-        targets: image1,
-        translateY: translateYValue1,
-        duration: 300,
-        easing: 'easeOutSine',
-    });
+  // Adjust the multiplier for each image separately
+  const translateYValue1 = scrollY * 0.02; // Slower movement for render1
+  const translateYValue2 = scrollY * 0.05;  // Faster movement for render2
 
-    // Animate render2
-    anime({
-        targets: image2,
-        translateY: translateYValue2,
-        duration: 300,
-        easing: 'easeOutSine',
-    });
+  // Animate render1
+  anime({
+    targets: image1,
+    translateY: translateYValue1,
+    duration: 300,
+    easing: 'easeOutSine',
+  });
+
+  // Animate render2
+  anime({
+    targets: image2,
+    translateY: translateYValue2,
+    duration: 300,
+    easing: 'easeOutSine',
+  });
 });
 
+function toggleSocialIconsColorForAbout() {
+  const socialIcons = document.querySelectorAll('.social-icon');
+  const jumbotronAbout = document.querySelector('.jumbotron-about');
+  const aboutSection = document.querySelector('.about');
+
+  window.addEventListener('scroll', () => {
+    const jumbotronAboutBottom = jumbotronAbout.getBoundingClientRect().bottom;
+    const aboutTop = aboutSection.getBoundingClientRect().top;
+
+    // Default color: White for icons outside the jumbotron-about and about sections
+    let iconColor = '#E2E2E2';
+
+    // Change color to black when jumbotron-about is in view
+    if (jumbotronAboutBottom > 0) {
+      iconColor = '#222222'; // Black when inside jumbotron-about
+    }
+
+    // Change color to white when about section is in view
+    if (aboutTop < window.innerHeight && aboutTop > 0) {
+      iconColor = '#E2E2E2'; // White when inside about section
+    }
+
+    // Apply the color to all social icons
+    socialIcons.forEach(icon => {
+      icon.style.color = iconColor;
+    });
+  });
+}
+
+// Call the function
+toggleSocialIconsColorForAbout();
+
+// Timeline javascript
+const root = document.getElementById("root")
+
+Timeline(root, {
+  data: [
+    {
+      title: "Enrollment at Kristianstad University (Bachelor of Science in Informatics, specialized in Digital Design)",
+      date: new Date(2023, 7, 28),
+    },
+
+    {
+      title: "Internship at blank",
+      date: new Date(2025, 10, 27),
+      borderColor: '#808000',
+      borderStyle: 'dashed',
+    },
+    {
+      title: "Graduation from Kristianstad University",
+      date: new Date(2026, 0, 4),
+    }
+  ],
+  align: 'bottom',
+  width: 700,
+})
