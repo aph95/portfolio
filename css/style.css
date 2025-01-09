@@ -727,6 +727,7 @@ ul {
 .lm-timeline {
   font-family: 'Noto Sans', sans-serif;
   font-size:1rem;
+  color:white;
 }
 
 ::-webkit-scrollbar {
@@ -746,4 +747,12 @@ ul {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #6123D8
+}
+
+.about-description {
+  color:white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size:1.5rem;
+  margin-top:3rem;
+  margin-bottom:3rem;
 }
