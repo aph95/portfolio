@@ -752,7 +752,15 @@ ul {
 .about-description {
   color:white;
   font-family: 'Noto Sans', sans-serif;
-  font-size:1.5rem;
-  margin-top:3rem;
-  margin-bottom:3rem;
+  font-size:1.3rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+
+.about-description-headline {
+  margin-top:2rem;
+  color:white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size:3rem;
+  font-weight:800;
 }
