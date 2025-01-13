@@ -92,7 +92,7 @@ function initScrollSpy() {
     } else {
       // For smaller screens, keep navbar fixed
       navbar.style.top = '0'; // Make sure navbar stays visible
-      window.removeEventListener('scroll', handleNavbarOnScroll); // Remove scroll event listener on smaller screens
+      window.removeEventListener('scroll', handleNavbarOnScroll); // Remove scroll event listener on smaller screens (below 768px width)
     }
   }
 
@@ -269,8 +269,6 @@ function toggleSocialIconsColorOnScroll() {
 // Call the function
 toggleSocialIconsColorOnScroll();
 
-// script.js
-
 // Function to animate boxes
 function animateBoxes() {
   anime({
@@ -323,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
       responsive: true, // Ensures the chart adjusts to screen size
       plugins: {
         legend: {
-          display: true, // Enable the legend to show labels at the top
+          display: true, // Enable legend to show labels at the top
           position: 'top', // Position the legend at the top
           labels: {
             boxWidth: 20, // Customize the width of the legend box
@@ -369,7 +367,7 @@ const image2 = document.getElementById('render2');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
-  // Adjust the multiplier for each image separately
+  // Multiplied adjusted for each image separately
   const translateYValue1 = scrollY * 0.02; // Slower movement for render1
   const translateYValue2 = scrollY * 0.05;  // Faster movement for render2
 

@@ -7,13 +7,12 @@ body {
 }
 
 /* General body styles */
-/* Set initial background color */
+/* Sets initial background color */
 body {
   transition: background-color 0.4s ease;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Smooth transition */
 }
 
 main {
@@ -141,7 +140,6 @@ nav a::after {
 }
 
 /* Exempts logo from hover effects */
-
 .logo-link::after {
   content: none;
 }
@@ -261,26 +259,18 @@ nav a:hover::after,
 .image-tags {
   position: absolute;
   bottom: 10px;
-  /* Keeps tags near the bottom */
   left: 20px;
-  /* Aligns tags to the left */
   display: flex;
-  /* Aligns tags horizontally */
   gap: 8px;
-  /* Adds spacing between tags */
   opacity: 0;
-  /* Hidden by default */
   transition: opacity 0.3s ease;
   pointer-events: none;
-  /* Prevents accidental hover interactions */
   flex-wrap: wrap;
-  /* Allows tags to wrap onto the next line if needed */
   border-radius: 2rem;
 }
 
 a:hover .image-tags {
   opacity: 1;
-  /* Shows the tags on hover */
 }
 
 .tag {
@@ -300,7 +290,6 @@ a:hover .image-tags {
 
 
 /* Swoop-in effect for highlighted projects */
-
 .headline {
   position: relative;
   overflow: hidden;
@@ -310,24 +299,22 @@ a:hover .image-tags {
 .project {
   display: inline-block;
   opacity: 0;
-  /* Start hidden */
   position: relative;
   color: #e2e2e2;
 }
 
+/* Placed out of view to the left */
 .highlighted {
   transform: translateX(-200%);
-  /* Far off to the left */
 }
 
+/* Placed out of view to the right */
 .project {
   transform: translateX(200%);
-  /* Far off to the right */
   color: #e2e2e2;
 }
 
 /* Style for start of paragraph */
-
 .kulturkompassen-text {
   font-variant: small-caps;
   font-weight: 600;
@@ -505,7 +492,6 @@ footer h4 {
 }
 
 /* Portfolio page */
-
 .jumbotron-portfolio {
   background-color: #E2E2E2;
   height: 100vh;
@@ -521,12 +507,10 @@ footer h4 {
 
 .jumbotron-portfolio .row {
   margin-bottom: 1rem;
-  /* Add spacing between rows if needed */
 }
 
 .jumbotron-portfolio .col-auto {
   padding-right: 1rem;
-  /* Adjust spacing between KULTUR and KOMPASSEN */
 }
 
 .portfolio-description {
@@ -545,7 +529,6 @@ footer h4 {
   right: -30%;
   transform: translateY(-50%);
   z-index: 1;
-  /* Adjust to make it visible */
   pointer-events: none;
   overflow: hidden;
 }
@@ -553,11 +536,8 @@ footer h4 {
 
 .phone-image {
   width: 70vw;
-  /* Adapt size to viewport width */
   height: auto;
-  /* Maintain aspect ratio */
   object-fit: cover;
-  /* Prevent distortion */
 }
 
 
@@ -598,7 +578,7 @@ ul {
   line-height: 0.78;
 }
 
-/* User needs analysis */
+/* User needs analysis styling */
 
 .needs-container {
   display: flex;
@@ -655,23 +635,16 @@ ul {
 
 .middle-container {
   display: flex;
-  /* Enable Flexbox for centering */
   justify-content: center;
-  /* Center horizontally */
   align-items: center;
-  /* Center vertically */
   position: relative;
-  /* Maintain positioning context */
   width: 100%;
-  /* Full width */
   min-height: 100vh;
-  /* Full viewport height */
   background-color: #222222;
 }
 
 .rotating-images {
   position: relative;
-  /* Keep relative positioning for child elements */
 }
 
 /* Responsive adjustments */
@@ -734,12 +707,12 @@ ul {
   width: 10px;
 }
 
-/* Track */
+/* Track for scrollbar */
 ::-webkit-scrollbar-track {
   background: #b0b0b0;
 }
 
-/* Handle */
+/* Handle for scrollbar */
 ::-webkit-scrollbar-thumb {
   background: #565656;
 }
@@ -749,6 +722,7 @@ ul {
   background: #6123D8
 }
 
+/* Text in about section */
 .about-description {
   color:white;
   font-family: 'Noto Sans', sans-serif;
@@ -757,6 +731,7 @@ ul {
   margin-bottom:1rem;
 }
 
+/* Headline for text in about section */
 .about-description-headline {
   margin-top:2rem;
   color:white;
@@ -765,6 +740,7 @@ ul {
   font-weight:800;
 }
 
+/* Background color for main-element in about page */
 .about-main {
   background-color:#222222;
 }
