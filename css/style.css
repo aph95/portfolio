@@ -227,14 +227,8 @@ nav a:hover::after,
   color: #6123D8;
 }
 
+
 .examples h2 {
-  font-weight: 900;
-  font-family: 'Noto Sans', sans-serif;
-  color: white;
-
-}
-
-.examples h1 {
   color: rgb(255, 255, 255);
   font-weight: 900;
   font-size: 3.5rem;
@@ -401,7 +395,7 @@ a:hover .image-tags {
   margin-right: 10px;
 }
 
-.contact-details h1 {
+.contact-details h2 {
   font-weight: 900;
   font-size: 3.5rem;
   text-align: center;
