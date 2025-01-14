@@ -81,6 +81,15 @@ main {
   }
 }
 
+.arrow-up {
+  width: 2rem;
+  max-width: 100%;
+  height: auto;
+  justify-content:center;
+  align-items: center;
+  animation: floatAnimation 2s infinite;
+}
+
 /* Navbar styles */
 .navbar {
   font-size: 1.2em;
@@ -649,7 +658,7 @@ ul {
 
 @media (max-width: 1268px) {
   .jumbotron-portfolio h1 {
-    font-size: 6rem;
+    font-size: 7rem;
   }
 
   .phone-container img {
