@@ -85,7 +85,7 @@ main {
   width: 2rem;
   max-width: 100%;
   height: auto;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   animation: floatAnimation 2s infinite;
 }
@@ -460,7 +460,7 @@ footer h4 {
   }
 
   #headline-projects {
-    font-size:3rem;
+    font-size: 3rem;
   }
 
 }
@@ -689,7 +689,7 @@ ul {
 }
 
 .about {
-  background-color:#222222;
+  background-color: #222222;
 }
 
 .lm-timeline-title::before {
@@ -699,8 +699,8 @@ ul {
 
 .lm-timeline {
   font-family: 'Noto Sans', sans-serif;
-  font-size:1rem;
-  color:white;
+  font-size: 1rem;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -724,23 +724,23 @@ ul {
 
 /* Text in about section */
 .about-description {
-  color:white;
+  color: white;
   font-family: 'Noto Sans', sans-serif;
-  font-size:1.3rem;
-  margin-top:1rem;
-  margin-bottom:1rem;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Headline for text in about section */
 .about-description-headline {
-  margin-top:2rem;
-  color:white;
+  margin-top: 2rem;
+  color: white;
   font-family: 'Noto Sans', sans-serif;
-  font-size:3rem;
-  font-weight:800;
+  font-size: 3rem;
+  font-weight: 800;
 }
 
 /* Background color for main-element in about page */
 .about-main {
-  background-color:#222222;
+  background-color: #222222;
 }
