@@ -348,6 +348,10 @@ a:hover .image-tags {
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+#headline-projects {
+  font-family: 'Inter', sans-serif;
+}
+
 .animated-button .circle {
   position: absolute;
   top: 50%;
