@@ -187,8 +187,6 @@ nav a:hover::after,
   margin-left: 1rem;
 }
 
-
-
 /* Responsive styling for the lightbulb */
 @media (max-width: 768px) {
   .ml6 i.fa-lightbulb {
@@ -488,6 +486,11 @@ footer h4 {
   nav a:hover::after {
     width: 0;
   }
+
+  .marquee {
+    display: none;
+  }
+  
 }
 
 #render-kulturkompassen {
