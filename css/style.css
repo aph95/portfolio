@@ -617,7 +617,7 @@ footer h4 {
   background-color: #222222;
 }
 
-.case-study h2, h3 {
+.case-study h2 {
   color: #e2e2e2;
   font-weight: 900;
   font-size: 5.3em;
@@ -625,7 +625,15 @@ footer h4 {
   font-family: 'Inter', sans-serif;
 }
 
-.gamified-elements h2, h3 {
+.case-study .row h3 {
+  color: #e2e2e2;
+  font-weight: 900;
+  font-size: 5.3em;
+  line-height: 0.78;
+  font-family: 'Inter', sans-serif;
+}
+
+.gamified-elements row h3 {
   color: #e2e2e2;
   font-weight: 900;
   font-size: 5.3em;
