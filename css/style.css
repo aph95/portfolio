@@ -458,6 +458,9 @@ footer h4 {
     top: 5rem;
   }
 
+  .marquee {
+    display: none;
+  }
   
 
   #headline-projects {
