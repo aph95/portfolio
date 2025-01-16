@@ -496,10 +496,43 @@ footer h4 {
     display: none;
   }
 
-  .image-tags {
+  .tag {
     display:none;
   }
   
+}
+
+/* Styles for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .animated-button {
+    padding: 12px 24px; /* Smaller padding */
+    font-size: 1.2rem; /* Smaller font size */
+    border-radius: 50px; /* Adjust radius */
+  }
+
+  .animated-button .text {
+    transform: translateX(-8px); /* Adjust text transform */
+  }
+
+  .animated-button:hover .text {
+    transform: translateX(8px); /* Adjust hover transform */
+  }
+
+  .tag {
+    display:none;
+  }
+}
+
+/* Styles for extra small screens (e.g., phones) */
+@media (max-width: 480px) {
+  .animated-button {
+    padding: 10px 20px;
+    font-size: 0.6rem;
+    border-radius: 40px;
+  }
+  .tag {
+    display:none;
+  }
 }
 
 #render-kulturkompassen {
