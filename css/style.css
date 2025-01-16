@@ -465,6 +465,10 @@ footer h4 {
     font-size: 3rem;
   }
 
+  .image-tags {
+    display:none;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -489,6 +493,10 @@ footer h4 {
 
   .marquee {
     display: none;
+  }
+
+  .image-tags {
+    display:none;
   }
   
 }
