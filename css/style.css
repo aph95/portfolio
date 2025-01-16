@@ -570,6 +570,7 @@ footer h4 {
   font-size: 8.3em;
   margin: 0;
   line-height: 0.78;
+  font-family: 'Inter', sans-serif;
 }
 
 .jumbotron-portfolio .row {
@@ -753,6 +754,7 @@ ul {
   font-size: 8.3em;
   margin: 0;
   line-height: 0.78;
+  font-family: 'Inter', sans-serif;
 }
 
 .about {
