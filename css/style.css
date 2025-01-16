@@ -605,35 +605,17 @@ footer h4 {
   overflow: hidden;
 }
 
-
 .phone-image {
   width: 70vw;
   height: auto;
   object-fit: cover;
 }
 
-
 .case-study {
   background-color: #222222;
 }
 
 .case-study h2 {
-  color: #e2e2e2;
-  font-weight: 900;
-  font-size: 5.3em;
-  line-height: 0.78;
-  font-family: 'Inter', sans-serif;
-}
-
-.case-study .row h3 {
-  color: #e2e2e2;
-  font-weight: 900;
-  font-size: 5.3em;
-  line-height: 0.78;
-  font-family: 'Inter', sans-serif;
-}
-
-.gamified-elements row h3 {
   color: #e2e2e2;
   font-weight: 900;
   font-size: 5.3em;
@@ -665,6 +647,7 @@ ul {
   font-weight: 900;
   font-size: 4.3em;
   line-height: 0.78;
+  font-family: 'Inter', sans-serif;
 }
 
 /* User needs analysis styling */
