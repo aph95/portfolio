@@ -162,6 +162,7 @@ nav a:hover::after,
   position: relative;
   font-weight: 900;
   font-size: 5.3em;
+  font-family: 'Inter', sans-serif;
 }
 
 .ml6 .text-wrapper {
